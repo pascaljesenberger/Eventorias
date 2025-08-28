@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		C64533962E60FA7F008714AB /* SignUpTextLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64533952E60FA7F008714AB /* SignUpTextLink.swift */; };
 		C64533992E60FCA7008714AB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64533982E60FCA7008714AB /* SignUpView.swift */; };
+		C67ECF0A2E610220005CFCFD /* BarBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECF092E610220005CFCFD /* BarBackButton.swift */; };
+		C67ECF0C2E610359005CFCFD /* CustomBackToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECF0B2E610359005CFCFD /* CustomBackToolbar.swift */; };
 		C6ACAA722E5D2C81008B6C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6ACAA6D2E5D2C81008B6C63 /* Assets.xcassets */; };
-		C6ACAA732E5D2C81008B6C63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA6E2E5D2C81008B6C63 /* ContentView.swift */; };
+		C6ACAA732E5D2C81008B6C63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */; };
 		C6ACAA742E5D2C81008B6C63 /* EventoriasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA702E5D2C81008B6C63 /* EventoriasApp.swift */; };
 		C6ACAA772E5D2C84008B6C63 /* EventoriasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA752E5D2C84008B6C63 /* EventoriasTests.swift */; };
 		C6ACAA7B2E5D2C86008B6C63 /* EventoriasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA782E5D2C86008B6C63 /* EventoriasUITests.swift */; };
@@ -45,11 +47,13 @@
 /* Begin PBXFileReference section */
 		C64533952E60FA7F008714AB /* SignUpTextLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextLink.swift; sourceTree = "<group>"; };
 		C64533982E60FCA7008714AB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C67ECF092E610220005CFCFD /* BarBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarBackButton.swift; sourceTree = "<group>"; };
+		C67ECF0B2E610359005CFCFD /* CustomBackToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackToolbar.swift; sourceTree = "<group>"; };
 		C6ACAA422E5D2B9E008B6C63 /* Eventorias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA502E5D2B9F008B6C63 /* EventoriasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA5A2E5D2B9F008B6C63 /* EventoriasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA6D2E5D2C81008B6C63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C6ACAA6E2E5D2C81008B6C63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C6ACAA6F2E5D2C81008B6C63 /* Eventorias.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eventorias.entitlements; sourceTree = "<group>"; };
 		C6ACAA702E5D2C81008B6C63 /* EventoriasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasApp.swift; sourceTree = "<group>"; };
 		C6ACAA752E5D2C84008B6C63 /* EventoriasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasTests.swift; sourceTree = "<group>"; };
@@ -156,8 +160,8 @@
 		C6ACAA8E2E60194D008B6C63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */,
 				C64533972E60FC97008714AB /* Authentification */,
-				C6ACAA6E2E5D2C81008B6C63 /* ContentView.swift */,
 				C6ACAA942E601C71008B6C63 /* Components */,
 			);
 			path = Views;
@@ -195,6 +199,8 @@
 				C6ACAA952E601C81008B6C63 /* AppBackground.swift */,
 				C6ACAA972E601DFF008B6C63 /* AppButton.swift */,
 				C64533952E60FA7F008714AB /* SignUpTextLink.swift */,
+				C67ECF092E610220005CFCFD /* BarBackButton.swift */,
+				C67ECF0B2E610359005CFCFD /* CustomBackToolbar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -343,11 +349,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6ACAA962E601C81008B6C63 /* AppBackground.swift in Sources */,
+				C67ECF0A2E610220005CFCFD /* BarBackButton.swift in Sources */,
 				C6ACAA922E6019CE008B6C63 /* AppDelegate.swift in Sources */,
+				C67ECF0C2E610359005CFCFD /* CustomBackToolbar.swift in Sources */,
 				C64533962E60FA7F008714AB /* SignUpTextLink.swift in Sources */,
 				C6ACAA8C2E601897008B6C63 /* SignInView.swift in Sources */,
 				C64533992E60FCA7008714AB /* SignUpView.swift in Sources */,
-				C6ACAA732E5D2C81008B6C63 /* ContentView.swift in Sources */,
+				C6ACAA732E5D2C81008B6C63 /* HomeView.swift in Sources */,
 				C6ACAA742E5D2C81008B6C63 /* EventoriasApp.swift in Sources */,
 				C6ACAA982E601DFF008B6C63 /* AppButton.swift in Sources */,
 			);
