@@ -20,6 +20,7 @@
 		C6ACAA8C2E601897008B6C63 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA8B2E601897008B6C63 /* SignInView.swift */; };
 		C6ACAA922E6019CE008B6C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA912E6019CE008B6C63 /* AppDelegate.swift */; };
 		C6ACAA962E601C81008B6C63 /* AppBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA952E601C81008B6C63 /* AppBackground.swift */; };
+		C6ACAA982E601DFF008B6C63 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA972E601DFF008B6C63 /* AppButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		C6ACAA8B2E601897008B6C63 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C6ACAA912E6019CE008B6C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6ACAA952E601C81008B6C63 /* AppBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
+		C6ACAA972E601DFF008B6C63 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				C6ACAA952E601C81008B6C63 /* AppBackground.swift */,
+				C6ACAA972E601DFF008B6C63 /* AppButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				C6ACAA8C2E601897008B6C63 /* SignInView.swift in Sources */,
 				C6ACAA732E5D2C81008B6C63 /* ContentView.swift in Sources */,
 				C6ACAA742E5D2C81008B6C63 /* EventoriasApp.swift in Sources */,
+				C6ACAA982E601DFF008B6C63 /* AppButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
