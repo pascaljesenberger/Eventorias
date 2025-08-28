@@ -9,9 +9,11 @@ import SwiftUI
 
 struct AppBackgroundModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content
-            .containerRelativeFrame([.horizontal, .vertical])
-            .background(Color.appBackground)
+        ZStack {
+            Color.appBackground
+                .ignoresSafeArea()
+            content
+        }
     }
 }
 

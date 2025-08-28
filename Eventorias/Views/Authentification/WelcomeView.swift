@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @State private var navigateToSignIn = false
+    @State private var showSignIn = false
 
     var body: some View {
         VStack(spacing: 64) {
@@ -18,19 +18,19 @@ struct WelcomeView: View {
                 .frame(maxWidth: 242, maxHeight: 120)
             
             CustomButton(
-                action: { navigateToSignIn = true },
-                title: "Sign in with email",
+                action: { showSignIn = true },
+                title: "Sign In with email",
                 image: Image("IconMail"),
-                width: 242,
+                width: 242
             )
             
             Spacer()
         }
         .padding(.top, 142)
-        .navigationDestination(isPresented: $navigateToSignIn) {
+        .appBackground
+        .fullScreenCover(isPresented: $showSignIn) {
             SignInView()
         }
-        .appBackground
     }
 }
 

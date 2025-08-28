@@ -8,44 +8,60 @@
 import SwiftUI
 
 struct SignInView: View {
-    @Environment(\.dismiss) private var dismiss
     @State private var email: String = ""
     @State private var password: String = ""
+    @FocusState private var focusedField: Field?
+
+    enum Field {
+        case email, password
+    }
     
     var body: some View {
-        VStack {
-            Text("Sign In")
-                .font(.system(size: 48, weight: .semibold))
-                .foregroundColor(.white)
-                
-            VStack(spacing: 24) {
-                CustomTextField(
-                    title: "Email",
-                    placeholder: "Enter your email",
-                    text: $email
-                )
-                
-                CustomTextField(
-                    title: "Password",
-                    placeholder: "Enter your password",
-                    text: $password
-                )
+        ScrollView {
+            VStack {
+                VStack(spacing: 32) {
+                    Text("Sign In")
+                        .font(.system(size: 48, weight: .semibold))
+                        .foregroundColor(.white)
+                    
+                    VStack(spacing: 24) {
+                        CustomTextField(
+                            title: "Email",
+                            placeholder: "Enter your email",
+                            text: $email
+                        )
+                        .focused($focusedField, equals: .email)
+                        .submitLabel(.next)
+                        .onSubmit {
+                            focusedField = .password
+                        }
+                        
+                        CustomTextField(
+                            title: "Password",
+                            placeholder: "Enter your password",
+                            text: $password
+                        )
+                        .focused($focusedField, equals: .password)
+                        .submitLabel(.done)
+                        .onSubmit {
+                            print("Sign In tapped")
+                        }
+                    }
+                    .padding(.vertical, 34)
+                    
+                    CustomButton(
+                        action: { print("Sign In tapped") },
+                        title: "Sign In",
+                        width: 242
+                    )
+                    
+                    Spacer()
+                }
+                .padding(.top, 84)
             }
-            .padding(.vertical, 34)
-            
-            CustomButton(
-                action: { print("") },
-                title: "Sign In",
-                width: 242,
-            )
-            
-            Spacer()
         }
-        .padding(.top, 84)
         .padding(.horizontal)
-        .ignoresSafeArea(.keyboard)
         .appBackground
-        .customBackToolbar(text: "Back")
     }
 }
 
