@@ -11,7 +11,7 @@ struct BarBackButton: View {
     var text: String? = nil
     
     var body: some View {
-        HStack {
+        HStack(spacing: 16) {
             Image("ArrowBack")
                 .resizable()
                 .scaledToFit()

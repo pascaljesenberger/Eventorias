@@ -8,31 +8,44 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State private var goToSignUp = false
-
+    @Environment(\.dismiss) private var dismiss
+    @State private var email: String = ""
+    @State private var password: String = ""
+    
     var body: some View {
-        VStack(spacing: 64) {
-            Image("AppLogo")
-                .resizable()
-                .scaledToFit()
-                .frame(maxWidth: 242, maxHeight: 120)
+        VStack {
+            Text("Sign In")
+                .font(.system(size: 48, weight: .semibold))
+                .foregroundColor(.white)
+                
+            VStack(spacing: 24) {
+                CustomTextField(
+                    title: "Email",
+                    placeholder: "Enter your email",
+                    text: $email
+                )
+                
+                CustomTextField(
+                    title: "Password",
+                    placeholder: "Enter your password",
+                    text: $password
+                )
+            }
+            .padding(.vertical, 34)
             
             CustomButton(
                 action: { print("") },
-                title: "Sign in with email",
-                image: Image("IconMail"),
+                title: "Sign In",
                 width: 242,
             )
             
             Spacer()
-            
-            SignUpTextLink(goToSignUp: $goToSignUp)
         }
-        .padding(.top, 142)
-        .navigationDestination(isPresented: $goToSignUp) {
-            SignUpView()
-        }
+        .padding(.top, 84)
+        .padding(.horizontal)
+        .ignoresSafeArea(.keyboard)
         .appBackground
+        .customBackToolbar(text: "Back")
     }
 }
 

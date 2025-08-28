@@ -14,7 +14,7 @@ struct EventoriasApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                SignInView()
+                WelcomeView()
             }
         }
     }
