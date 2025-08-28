@@ -1,8 +1,8 @@
 //
-//  EventoriasApp.swift
+//  AppDelegate.swift
 //  Eventorias
 //
-//  Created by Pascal Jesenberger on 26/08/2025.
+//  Created by Pascal Jesenberger on 28/08/2025.
 //
 
 import SwiftUI
@@ -13,18 +13,5 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
         return true
-    }
-}
-
-@main
-struct EventoriasApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
-    var body: some Scene {
-        WindowGroup {
-            NavigationView {
-                ContentView()
-            }
-        }
     }
 }

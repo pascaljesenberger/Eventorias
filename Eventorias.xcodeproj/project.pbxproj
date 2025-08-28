@@ -17,6 +17,8 @@
 		C6ACAA862E5E5E2E008B6C63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6ACAA842E5E5E2E008B6C63 /* GoogleService-Info.plist */; };
 		C6ACAA872E5E5E2E008B6C63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6ACAA842E5E5E2E008B6C63 /* GoogleService-Info.plist */; };
 		C6ACAA8A2E5E5FB2008B6C63 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C6ACAA892E5E5FB2008B6C63 /* FirebaseAuth */; };
+		C6ACAA8C2E601897008B6C63 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA8B2E601897008B6C63 /* SignInView.swift */; };
+		C6ACAA922E6019CE008B6C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA912E6019CE008B6C63 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		C6ACAA782E5D2C86008B6C63 /* EventoriasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasUITests.swift; sourceTree = "<group>"; };
 		C6ACAA792E5D2C86008B6C63 /* EventoriasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C6ACAA842E5E5E2E008B6C63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6ACAA8B2E601897008B6C63 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		C6ACAA912E6019CE008B6C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				C6ACAA712E5D2C81008B6C63 /* Eventorias */,
-				C6ACAA762E5D2C84008B6C63 /* EventoriasTests */,
-				C6ACAA7A2E5D2C86008B6C63 /* EventoriasUITests */,
+				C6ACAA8D2E60189E008B6C63 /* Tests */,
 				C6ACAA432E5D2B9E008B6C63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,11 +102,10 @@
 		C6ACAA712E5D2C81008B6C63 /* Eventorias */ = {
 			isa = PBXGroup;
 			children = (
-				C6ACAA6D2E5D2C81008B6C63 /* Assets.xcassets */,
-				C6ACAA6E2E5D2C81008B6C63 /* ContentView.swift */,
-				C6ACAA6F2E5D2C81008B6C63 /* Eventorias.entitlements */,
-				C6ACAA702E5D2C81008B6C63 /* EventoriasApp.swift */,
-				C6ACAA842E5E5E2E008B6C63 /* GoogleService-Info.plist */,
+				C6ACAA932E601A8F008B6C63 /* Configuration */,
+				C6ACAA902E6019B8008B6C63 /* App */,
+				C6ACAA8E2E60194D008B6C63 /* Views */,
+				C6ACAA8F2E601979008B6C63 /* Resources */,
 			);
 			path = Eventorias;
 			sourceTree = "<group>";
@@ -123,6 +125,50 @@
 				C6ACAA792E5D2C86008B6C63 /* EventoriasUITestsLaunchTests.swift */,
 			);
 			path = EventoriasUITests;
+			sourceTree = "<group>";
+		};
+		C6ACAA8D2E60189E008B6C63 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C6ACAA762E5D2C84008B6C63 /* EventoriasTests */,
+				C6ACAA7A2E5D2C86008B6C63 /* EventoriasUITests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		C6ACAA8E2E60194D008B6C63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6ACAA6E2E5D2C81008B6C63 /* ContentView.swift */,
+				C6ACAA8B2E601897008B6C63 /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6ACAA8F2E601979008B6C63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C6ACAA6D2E5D2C81008B6C63 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C6ACAA902E6019B8008B6C63 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C6ACAA702E5D2C81008B6C63 /* EventoriasApp.swift */,
+				C6ACAA912E6019CE008B6C63 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C6ACAA932E601A8F008B6C63 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C6ACAA6F2E5D2C81008B6C63 /* Eventorias.entitlements */,
+				C6ACAA842E5E5E2E008B6C63 /* GoogleService-Info.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6ACAA922E6019CE008B6C63 /* AppDelegate.swift in Sources */,
+				C6ACAA8C2E601897008B6C63 /* SignInView.swift in Sources */,
 				C6ACAA732E5D2C81008B6C63 /* ContentView.swift in Sources */,
 				C6ACAA742E5D2C81008B6C63 /* EventoriasApp.swift in Sources */,
 			);
@@ -427,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Eventorias/Eventorias.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Eventorias/Configuration/Eventorias.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GJ746626DJ;
@@ -453,10 +501,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Debug;
@@ -466,7 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Eventorias/Eventorias.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Eventorias/Configuration/Eventorias.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GJ746626DJ;
@@ -492,10 +541,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Release;
@@ -514,10 +564,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.jesenberger.pascal.EventoriasTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eventorias.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Eventorias";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
@@ -537,10 +588,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.jesenberger.pascal.EventoriasTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eventorias.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Eventorias";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
@@ -559,10 +611,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.jesenberger.pascal.EventoriasUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Eventorias;
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
@@ -581,10 +634,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.jesenberger.pascal.EventoriasUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Eventorias;
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
