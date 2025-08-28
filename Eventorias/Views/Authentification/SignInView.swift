@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignInView: View {
+    @State private var goToSignUp = false
+
     var body: some View {
         VStack(spacing: 64) {
             Image("AppLogo")
@@ -23,8 +25,13 @@ struct SignInView: View {
             )
             
             Spacer()
+            
+            SignUpTextLink(goToSignUp: $goToSignUp)
         }
         .padding(.top, 142)
+        .navigationDestination(isPresented: $goToSignUp) {
+            SignUpView()
+        }
         .appBackground
     }
 }
