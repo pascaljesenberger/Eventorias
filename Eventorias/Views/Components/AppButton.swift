@@ -36,7 +36,7 @@ struct CustomButton: View {
     
     var body: some View {
         Button(action: action) {
-            HStack(spacing: 8) {
+            HStack(spacing: 24) {
                 if let image = image {
                     image
                         .resizable()
@@ -56,6 +56,7 @@ struct CustomButton: View {
             .background(backgroundColor)
             .cornerRadius(cornerRadius)
         }
+        .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 4)
         .buttonStyle(PlainButtonStyle())
     }
 }

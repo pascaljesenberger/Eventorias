@@ -16,7 +16,7 @@ struct SignInView: View {
                 .frame(maxWidth: 242, maxHeight: 120)
             
             CustomButton(
-                action: { print("Image and Text") },
+                action: { print("") },
                 title: "Sign in with email",
                 image: Image("IconMail"),
                 width: 242,
