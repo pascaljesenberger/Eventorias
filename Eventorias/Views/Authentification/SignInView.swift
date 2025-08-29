@@ -22,8 +22,8 @@ struct SignInView: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("Sign In")
-                    .font(.system(size: 48, weight: .semibold))
+                Text("Sign In / Sign Up")
+                    .font(.system(size: 34, weight: .bold))
                     .foregroundColor(.white)
                     .padding(.vertical, 64)
 
@@ -45,7 +45,13 @@ struct SignInView: View {
                     .focused($focusedField, equals: .password)
                     .submitLabel(.done)
                     .onSubmit { viewModel.submit() }
-
+                    
+                    if let error = viewModel.errorMessage {
+                        Text(error)
+                            .foregroundColor(.appRed)
+                            .multilineTextAlignment(.center)
+                    }
+                    
                     CustomButton(
                         action: { viewModel.submit() },
                         title: viewModel.isLoading ? "Processing..." : "Sign In",
@@ -53,12 +59,6 @@ struct SignInView: View {
                     )
                     .disabled(!viewModel.canSubmit)
                     .opacity(viewModel.canSubmit ? 1.0 : 0.5)
-
-                    if let error = viewModel.errorMessage {
-                        Text(error)
-                            .foregroundColor(.appRed)
-                            .multilineTextAlignment(.center)
-                    }
                 }
 
                 Spacer()
@@ -66,6 +66,14 @@ struct SignInView: View {
         }
         .padding(.horizontal)
         .appBackground
+        .alert("Create Account", isPresented: $viewModel.showSignupConfirmation) {
+            Button("Cancel", role: .cancel) { }
+            Button("Create Account") {
+                viewModel.signUp()
+            }
+        } message: {
+            Text("No account found with this email. Would you like to create a new account?")
+        }
     }
 }
 

@@ -58,6 +58,73 @@ class SignInViewModel: ObservableObject {
 
     func submit() {
         guard canSubmit else { return }
+        signIn()
+    }
+
+    func signIn() {
+        isLoading = true
+        errorMessage = nil
+
+        let emailTrimmed = email.trimmingCharacters(in: .whitespacesAndNewlines)
+        let passwordTrimmed = password.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        Auth.auth().signIn(withEmail: emailTrimmed, password: passwordTrimmed) { [weak self] result, error in
+            DispatchQueue.main.async {
+                self?.isLoading = false
+
+                if let error = error as NSError? {
+                    if error.code == AuthErrorCode.userNotFound.rawValue || error.code == 17004 {
+                        self?.showSignupConfirmation = true
+                    } else {
+                        self?.handleAuthError(error)
+                    }
+                } else {
+                    self?.authManager.isSignedIn = true
+                }
+            }
+        }
+    }
+
+    func signUp() {
+        isLoading = true
+        errorMessage = nil
+
+        let emailTrimmed = email.trimmingCharacters(in: .whitespacesAndNewlines)
+        let passwordTrimmed = password.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        Auth.auth().createUser(withEmail: emailTrimmed, password: passwordTrimmed) { [weak self] result, error in
+            DispatchQueue.main.async {
+                self?.isLoading = false
+                self?.showSignupConfirmation = false
+
+                if let error = error as NSError? {
+                    self?.handleAuthError(error)
+                } else {
+                    self?.authManager.isSignedIn = true
+                }
+            }
+        }
+    }
+
+    private func handleAuthError(_ error: NSError) {
+        switch error.code {
+        case AuthErrorCode.invalidEmail.rawValue:
+            errorMessage = "Invalid email address"
+        case AuthErrorCode.wrongPassword.rawValue:
+            errorMessage = "Incorrect password"
+        case AuthErrorCode.userNotFound.rawValue:
+            errorMessage = "No account found with this email"
+        case AuthErrorCode.emailAlreadyInUse.rawValue:
+            errorMessage = "An account already exists with this email"
+        case AuthErrorCode.weakPassword.rawValue:
+            errorMessage = "Password is too weak"
+        case AuthErrorCode.networkError.rawValue:
+            errorMessage = "Network error. Please check your connection"
+        case AuthErrorCode.tooManyRequests.rawValue:
+            errorMessage = "Too many requests. Please try again later"
+        default:
+            errorMessage = "Authentication failed. Please try again"
+        }
     }
 
     private func isValidEmail(_ email: String) -> Bool {
