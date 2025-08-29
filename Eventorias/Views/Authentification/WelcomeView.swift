@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @ObservedObject var authManager: AuthManager
     @State private var showSignIn = false
 
     var body: some View {
@@ -29,11 +30,11 @@ struct WelcomeView: View {
         .padding(.top, 142)
         .appBackground
         .fullScreenCover(isPresented: $showSignIn) {
-            SignInView()
+            SignInView(authManager: authManager)
         }
     }
 }
 
 #Preview {
-    WelcomeView()
+    WelcomeView(authManager: AuthManager())
 }

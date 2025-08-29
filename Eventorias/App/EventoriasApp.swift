@@ -10,11 +10,18 @@ import SwiftUI
 @main
 struct EventoriasApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
+    @StateObject private var authManager = AuthManager()
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                WelcomeView()
+                if authManager.isSignedIn {
+                    HomeView()
+                        .environmentObject(authManager)
+                } else {
+                    WelcomeView(authManager: authManager)
+                        .environmentObject(authManager)
+                }
             }
         }
     }

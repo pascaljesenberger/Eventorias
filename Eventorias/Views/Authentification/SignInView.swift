@@ -8,56 +8,60 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @StateObject private var viewModel: SignInViewModel
     @FocusState private var focusedField: Field?
 
     enum Field {
         case email, password
     }
-    
+
+    init(authManager: AuthManager) {
+        _viewModel = StateObject(wrappedValue: SignInViewModel(authManager: authManager))
+    }
+
     var body: some View {
         ScrollView {
             VStack {
-                VStack(spacing: 32) {
-                    Text("Sign In")
-                        .font(.system(size: 48, weight: .semibold))
-                        .foregroundColor(.white)
-                    
-                    VStack(spacing: 24) {
-                        CustomTextField(
-                            title: "Email",
-                            placeholder: "Enter your email",
-                            text: $email
-                        )
-                        .focused($focusedField, equals: .email)
-                        .submitLabel(.next)
-                        .onSubmit {
-                            focusedField = .password
-                        }
-                        
-                        CustomTextField(
-                            title: "Password",
-                            placeholder: "Enter your password",
-                            text: $password
-                        )
-                        .focused($focusedField, equals: .password)
-                        .submitLabel(.done)
-                        .onSubmit {
-                            print("Sign In tapped")
-                        }
-                    }
-                    .padding(.vertical, 34)
-                    
+                Text("Sign In")
+                    .font(.system(size: 48, weight: .semibold))
+                    .foregroundColor(.white)
+                    .padding(.vertical, 64)
+
+                VStack(spacing: 24) {
+                    CustomTextField(
+                        title: "Email",
+                        placeholder: "Enter your email",
+                        text: $viewModel.email
+                    )
+                    .focused($focusedField, equals: .email)
+                    .submitLabel(.next)
+                    .onSubmit { focusedField = .password }
+
+                    CustomTextField(
+                        title: "Password",
+                        placeholder: "Enter your password",
+                        text: $viewModel.password
+                    )
+                    .focused($focusedField, equals: .password)
+                    .submitLabel(.done)
+                    .onSubmit { viewModel.submit() }
+
                     CustomButton(
-                        action: { print("Sign In tapped") },
-                        title: "Sign In",
+                        action: { viewModel.submit() },
+                        title: viewModel.isLoading ? "Processing..." : "Sign In",
                         width: 242
                     )
-                    
-                    Spacer()
+                    .disabled(!viewModel.canSubmit)
+                    .opacity(viewModel.canSubmit ? 1.0 : 0.5)
+
+                    if let error = viewModel.errorMessage {
+                        Text(error)
+                            .foregroundColor(.appRed)
+                            .multilineTextAlignment(.center)
+                    }
                 }
-                .padding(.top, 84)
+
+                Spacer()
             }
         }
         .padding(.horizontal)
@@ -66,5 +70,5 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView()
+    SignInView(authManager: AuthManager())
 }
