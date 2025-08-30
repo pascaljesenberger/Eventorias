@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var selectedTab: String = "Events"
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            ZStack {
+                if selectedTab == "Events" {
+                    EventsView()
+                } else if selectedTab == "Profile" {
+                    ProfileView()
+                }
+            }
+            
+            CustomTabBar(selectedTab: $selectedTab)
         }
-        .padding()
+        .appBackground
     }
 }
 
