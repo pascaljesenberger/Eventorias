@@ -31,7 +31,6 @@ struct CustomSearchBar: View {
                             }
                             .font(.system(size: 16, weight: .regular))
                             .foregroundColor(.white)
-                            .tint(.white)
                         
                         Spacer()
                     }

@@ -11,13 +11,16 @@ struct EventsView: View {
     @State private var searchText: String = ""
     
     var body: some View {
-        VStack {
+        VStack(spacing: 14) {
             CustomSearchBar(
                 searchText: $searchText,
                 action: { print("") },
                 onCancel: { searchText = "" }
             )
             .padding(.top, 24)
+            
+            SortingButton()
+                .frame(maxWidth: .infinity, alignment: .leading)
             
             ScrollView {
                 VStack {
