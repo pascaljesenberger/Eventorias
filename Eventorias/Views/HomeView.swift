@@ -26,6 +26,7 @@ struct HomeView: View {
                     image: Image("PlusIcon"),
                     cornerRadius: 16,
                     width: 56,
+                    height: 56,
                     imageSize: 18
                 )
                 .frame(maxWidth: .infinity, alignment: .trailing)

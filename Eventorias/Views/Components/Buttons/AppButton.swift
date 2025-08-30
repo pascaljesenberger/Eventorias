@@ -44,7 +44,7 @@ struct CustomButton: View {
                     image
                         .resizable()
                         .scaledToFit()
-                        .frame(width: imageSize)
+                        .frame(width: imageSize, height: imageSize)
                         .foregroundColor(.white)
                 }
                 
