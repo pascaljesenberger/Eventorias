@@ -42,6 +42,7 @@
 		C67ECF802E6277D3005CFCFD /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECF7F2E6277D3005CFCFD /* CustomTabBar.swift */; };
 		C67ECF852E6283A9005CFCFD /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECF842E6283A9005CFCFD /* CustomSearchBar.swift */; };
 		C67ECF872E6292F2005CFCFD /* SortingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECF862E6292F2005CFCFD /* SortingButton.swift */; };
+		C67ECF8A2E6299CD005CFCFD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECF892E6299CD005CFCFD /* Event.swift */; };
 		C6ACAA722E5D2C81008B6C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6ACAA6D2E5D2C81008B6C63 /* Assets.xcassets */; };
 		C6ACAA732E5D2C81008B6C63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */; };
 		C6ACAA742E5D2C81008B6C63 /* EventoriasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA702E5D2C81008B6C63 /* EventoriasApp.swift */; };
@@ -85,6 +86,7 @@
 		C67ECF7F2E6277D3005CFCFD /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		C67ECF842E6283A9005CFCFD /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		C67ECF862E6292F2005CFCFD /* SortingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingButton.swift; sourceTree = "<group>"; };
+		C67ECF892E6299CD005CFCFD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C6ACAA422E5D2B9E008B6C63 /* Eventorias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA502E5D2B9F008B6C63 /* EventoriasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA5A2E5D2B9F008B6C63 /* EventoriasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,14 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		C67ECF882E6299B9005CFCFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C67ECF892E6299CD005CFCFD /* Event.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C6ACAA392E5D2B9E008B6C63 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +218,7 @@
 			children = (
 				C6ACAA932E601A8F008B6C63 /* Configuration */,
 				C6ACAA902E6019B8008B6C63 /* App */,
+				C67ECF882E6299B9005CFCFD /* Model */,
 				C6ACAA8E2E60194D008B6C63 /* Views */,
 				C67ECF0F2E611E45005CFCFD /* ViewModels */,
 				C6ACAA8F2E601979008B6C63 /* Resources */,
@@ -461,6 +472,7 @@
 				C67ECF792E6273D2005CFCFD /* ProfileView.swift in Sources */,
 				C67ECF152E612099005CFCFD /* AuthManager.swift in Sources */,
 				C67ECF802E6277D3005CFCFD /* CustomTabBar.swift in Sources */,
+				C67ECF8A2E6299CD005CFCFD /* Event.swift in Sources */,
 				C6ACAA962E601C81008B6C63 /* AppBackground.swift in Sources */,
 				C67ECF0A2E610220005CFCFD /* BarBackButton.swift in Sources */,
 				C6ACAA922E6019CE008B6C63 /* AppDelegate.swift in Sources */,
