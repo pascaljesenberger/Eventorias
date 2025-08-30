@@ -22,18 +22,18 @@ struct CustomTextField: View {
             
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
-                    .font(.custom("Inter", size: 12).weight(.regular))
+                    .font(.system(size: 12).weight(.regular))
                     .foregroundColor(.appGray)
                 
                 ZStack(alignment: .leading) {
                     if text.isEmpty {
                         Text(placeholder)
-                            .font(.custom("Inter", size: 16).weight(.regular))
+                            .font(.system(size: 16).weight(.regular))
                             .foregroundColor(.appLightGray)
                     }
                     
                     TextField("", text: $text)
-                        .font(.custom("Inter", size: 16).weight(.regular))
+                        .font(.system(size: 16).weight(.regular))
                         .foregroundColor(.white)
                 }
             }
@@ -45,7 +45,7 @@ struct CustomTextField: View {
 
 #Preview {
     @Previewable @State var text = ""
-    return CustomTextField(
+    CustomTextField(
         title: "Email",
         placeholder: "Enter your email",
         text: $text

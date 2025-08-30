@@ -22,6 +22,7 @@ struct HomeView: View {
             
             CustomTabBar(selectedTab: $selectedTab)
         }
+        .ignoresSafeArea(.keyboard)
         .appBackground
     }
 }

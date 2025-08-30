@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct EventsView: View {
+    @State private var searchText: String = ""
+    
     var body: some View {
-            VStack {
-                Text("EventsView")
+        VStack {
+            CustomSearchBar(
+                searchText: $searchText,
+                action: { print("") },
+                onCancel: { searchText = "" }
+            )
+            .padding(.top, 24)
+            
+            ScrollView {
+                VStack {
+                    Text("EventsView")
+                        .foregroundColor(.white)
+                        .padding()
+                }
             }
+        }
         .appBackground
     }
 }
