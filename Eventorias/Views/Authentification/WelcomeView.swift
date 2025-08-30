@@ -21,7 +21,7 @@ struct WelcomeView: View {
             CustomButton(
                 action: { showSignIn = true },
                 title: "Sign In with email",
-                image: Image("IconMail"),
+                image: Image("MailIcon"),
                 width: 242
             )
             

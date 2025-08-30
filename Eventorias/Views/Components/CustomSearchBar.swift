@@ -20,7 +20,7 @@ struct CustomSearchBar: View {
                 .foregroundColor(.appDarkGray)
                 .overlay(
                     HStack {
-                        Image("Search")
+                        Image("SearchIcon")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 16)

@@ -12,7 +12,7 @@ struct BarBackButton: View {
     
     var body: some View {
         HStack(spacing: 16) {
-            Image("ArrowBack")
+            Image("ArrowBackIcon")
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: 24, maxHeight: 24)

@@ -15,6 +15,7 @@ struct CustomButton: View {
     let height: CGFloat
     let title: String?
     let image: Image?
+    let imageSize: CGFloat?
     
     init(
         action: @escaping () -> Void,
@@ -23,7 +24,8 @@ struct CustomButton: View {
         cornerRadius: CGFloat = 4,
         backgroundColor: Color = Color.appRed,
         width: CGFloat? = nil,
-        height: CGFloat = 52
+        height: CGFloat = 52,
+        imageSize: CGFloat = 24
     ) {
         self.action = action
         self.title = title
@@ -32,6 +34,7 @@ struct CustomButton: View {
         self.backgroundColor = backgroundColor
         self.width = width
         self.height = height
+        self.imageSize = imageSize
     }
     
     var body: some View {
@@ -41,7 +44,7 @@ struct CustomButton: View {
                     image
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 24, height: 24)
+                        .frame(width: imageSize)
                         .foregroundColor(.white)
                 }
                 
