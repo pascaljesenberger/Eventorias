@@ -30,7 +30,7 @@ struct WelcomeView: View {
         .padding(.top, 142)
         .appBackground
         .fullScreenCover(isPresented: $showSignIn) {
-            SignInView(authManager: authManager)
+            AuthenticationView(authManager: authManager)
         }
     }
 }

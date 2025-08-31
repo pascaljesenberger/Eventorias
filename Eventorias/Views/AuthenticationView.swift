@@ -1,5 +1,5 @@
 //
-//  SignInView.swift
+//  AuthenticationView.swift
 //  Eventorias
 //
 //  Created by Pascal Jesenberger on 28/08/2025.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SignInView: View {
-    @StateObject private var viewModel: SignInViewModel
+struct AuthenticationView: View {
+    @StateObject private var viewModel: AuthenticationViewModel
     @FocusState private var focusedField: Field?
 
     enum Field {
@@ -16,7 +16,7 @@ struct SignInView: View {
     }
 
     init(authManager: AuthManager) {
-        _viewModel = StateObject(wrappedValue: SignInViewModel(authManager: authManager))
+        _viewModel = StateObject(wrappedValue: AuthenticationViewModel(authManager: authManager))
     }
 
     var body: some View {
@@ -78,5 +78,5 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView(authManager: AuthManager())
+    AuthenticationView(authManager: AuthManager())
 }

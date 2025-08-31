@@ -1,5 +1,5 @@
 //
-//  SignInViewModel.swift
+//  AuthenticationViewModel.swift
 //  Eventorias
 //
 //  Created by Pascal Jesenberger on 29/08/2025.
@@ -9,7 +9,7 @@ import Foundation
 import FirebaseAuth
 import SwiftUI
 
-class SignInViewModel: ObservableObject {
+class AuthenticationViewModel: ObservableObject {
     @Published var email = "" {
         didSet { validate(.email) }
     }
