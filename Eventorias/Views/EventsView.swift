@@ -39,9 +39,7 @@ struct EventsView: View {
             } else if viewModel.isLoading {
                 Spacer()
                 
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                    .scaleEffect(1.2)
+                LoadingIndicator()
                 
                 Spacer()
             } else {
