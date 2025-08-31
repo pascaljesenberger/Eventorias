@@ -177,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				C67ECF7F2E6277D3005CFCFD /* CustomTabBar.swift */,
+				C67ECF7C2E627431005CFCFD /* TabBarItem.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -314,7 +315,6 @@
 				C67ECF0D2E610E10005CFCFD /* CustomTextField.swift */,
 				C67ECF0B2E610359005CFCFD /* CustomBackToolbar.swift */,
 				C67ECF8D2E63E2D1005CFCFD /* EventRow.swift */,
-				C67ECF7C2E627431005CFCFD /* TabBarItem.swift */,
 				C67ECF832E628391005CFCFD /* Buttons */,
 				C67ECF7E2E6277C5005CFCFD /* TabBar */,
 			);

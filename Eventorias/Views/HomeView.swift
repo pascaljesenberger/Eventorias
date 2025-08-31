@@ -9,17 +9,19 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var selectedTab: String = "Events"
-    
+    let tabBarHeight: CGFloat = 56
+
     var body: some View {
-        VStack {
-            ZStack {
+        ZStack {
+            VStack(spacing: 0) {
                 if selectedTab == "Events" {
                     EventsView()
                 } else if selectedTab == "Profile" {
                     ProfileView()
                 }
+                CustomTabBar(selectedTab: $selectedTab)
             }
-            
+
             if selectedTab == "Events" {
                 CustomButton(
                     action: { print("") },
@@ -29,11 +31,10 @@ struct HomeView: View {
                     height: 56,
                     imageSize: 18
                 )
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .padding()
+                .padding(.trailing, 8)
+                .padding(.bottom, tabBarHeight + 12)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
             }
-            
-            CustomTabBar(selectedTab: $selectedTab)
         }
         .ignoresSafeArea(.keyboard)
         .appBackground
