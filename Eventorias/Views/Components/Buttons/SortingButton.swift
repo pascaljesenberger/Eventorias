@@ -8,31 +8,40 @@
 import SwiftUI
 
 struct SortingButton: View {
-    var text: String = "Sort"
+    @Binding var selectedSortOption: SortOption
     var image: Image? = Image("SortIcon")
     
     var body: some View {
         HStack {
-            RoundedRectangle(cornerRadius: 100)
-                .frame(width: 105, height: 35)
-                .foregroundColor(.appDarkGray)
-                .overlay(
-                    HStack {
-                        image?
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 12)
-                        
-                        Text(text)
-                            .font(.system(size: 16, weight: .regular))
-                            .foregroundColor(.white)
+            Menu {
+                ForEach(SortOption.allCases, id: \.self) { option in
+                    Button(option.rawValue) {
+                        selectedSortOption = option
                     }
-                )
+                }
+            } label: {
+                RoundedRectangle(cornerRadius: 100)
+                    .frame(width: 105, height: 35)
+                    .foregroundColor(.appDarkGray)
+                    .overlay(
+                        HStack {
+                            image?
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 12)
+                            
+                            Text("Sort")
+                                .font(.system(size: 16, weight: .regular))
+                                .foregroundColor(.white)
+                        }
+                    )
+            }
         }
         .padding(.horizontal)
     }
 }
 
 #Preview {
-    SortingButton()
+    @Previewable @State var sortOption = SortOption.dateAsc
+    SortingButton(selectedSortOption: $sortOption)
 }

@@ -8,24 +8,29 @@
 import SwiftUI
 
 struct EventsView: View {
-    @StateObject private var eventManager = EventManager()
-    @State private var searchText: String = ""
+    @StateObject private var viewModel = EventsViewModel()
     
     var body: some View {
         VStack(spacing: 14) {
             CustomSearchBar(
-                searchText: $searchText,
-                action: { print("") },
-                onCancel: { searchText = "" }
+                searchText: $viewModel.searchText,
+                action: { viewModel.filterAndSort() },
+                onCancel: {
+                    viewModel.searchText = ""
+                    viewModel.filterAndSort()
+                }
             )
             .padding(.top, 24)
             
-            SortingButton()
+            SortingButton(selectedSortOption: $viewModel.selectedSortOption)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .onChange(of: viewModel.selectedSortOption) {
+                    viewModel.filterAndSort()
+                }
             
             ScrollView {
                 VStack(spacing: 12) {
-                    ForEach(eventManager.events) { event in
+                    ForEach(viewModel.filteredEvents) { event in
                         EventRow(
                             imageURL: event.image,
                             title: event.title,
@@ -38,7 +43,7 @@ struct EventsView: View {
             }
         }
         .onAppear {
-            eventManager.fetchEvents()
+            viewModel.fetchEvents()
         }
         .appBackground
     }
