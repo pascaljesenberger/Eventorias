@@ -23,19 +23,19 @@ struct EventsView: View {
             SortingButton()
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            List(eventManager.events) { event in
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(event.title)
-                        .font(.headline)
-                    Text(event.description)
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                    Text("\(event.date) - \(event.time)")
-                        .font(.caption)
+            ScrollView {
+                VStack(spacing: 12) {
+                    ForEach(eventManager.events) { event in
+                        EventRow(
+                            imageURL: event.image,
+                            title: event.title,
+                            profileImageURL: event.profileImageURL,
+                            date: event.date
+                        )
+                    }
                 }
-                .padding(.vertical, 4)
+                .padding(.horizontal)
             }
-            .listStyle(.plain)
         }
         .onAppear {
             eventManager.fetchEvents()
