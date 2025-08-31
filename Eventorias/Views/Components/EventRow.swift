@@ -24,20 +24,7 @@ struct EventRow: View {
             
             HStack(spacing: 12) {
                 HStack(spacing: 12) {
-                    if let urlString = profileImageURL, let url = URL(string: urlString) {
-                        AsyncImage(url: url) { image in
-                            image.resizable()
-                        } placeholder: {
-                            Circle().fill(Color.gray)
-                        }
-                        .scaledToFill()
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())
-                    } else {
-                        Circle()
-                            .fill(Color.gray)
-                            .frame(width: 40, height: 40)
-                    }
+                    EventProfileImage(urlString: profileImageURL, imageSize: 40)
                     
                     VStack(alignment: .leading, spacing: 8) {
                         Text(title)

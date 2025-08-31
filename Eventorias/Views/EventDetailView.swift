@@ -10,76 +10,37 @@ import SwiftUI
 struct EventDetailView: View {
     var event: Event
     
-    private var formattedDate: String {
-        DateHelper.formatDate(event.date)
-    }
-    
-    private var formattedTime: String {
-        DateHelper.formatTime(event.time)
-    }
+    private var formattedDate: String { DateHelper.formatDate(event.date) }
+    private var formattedTime: String { DateHelper.formatTime(event.time) }
     
     var body: some View {
         ScrollView {
             VStack(spacing: 18) {
-                if let urlString = event.image, let url = URL(string: urlString) {
-                    AsyncImage(url: url) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxWidth: .infinity, maxHeight: 364)
-                            .cornerRadius(12)
-                    } placeholder: {
-                        Rectangle()
-                            .fill(Color.gray.opacity(0.3))
-                            .frame(height: 364)
-                            .cornerRadius(12)
-                    }
-                } else {
-                    Rectangle()
-                        .fill(Color.gray.opacity(0.3))
-                        .frame(height: 364)
-                        .cornerRadius(12)
-                }
+                EventImage(imageURL: event.image)
+                
                 HStack {
                     VStack(alignment: .leading) {
-                        HStack(spacing: 12) {
-                            Image("EventIcon")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 24, height: 24)
-                                
-                            Text(formattedDate)
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                        }
-                        HStack(spacing: 12) {
-                            Image("ClockIcon")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 24, height: 24)
-                            
-                            Text(formattedTime)
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                        }
+                        EventInfoRow(iconName: "CalendarIcon", text: formattedDate)
+                        EventInfoRow(iconName: "ClockIcon", text: formattedTime)
                     }
                     
                     Spacer()
                     
-                    if let urlString = event.profileImageURL, let url = URL(string: urlString) {
-                        AsyncImage(url: url) { image in
-                            image.resizable()
-                        } placeholder: {
-                            Circle().fill(Color.gray)
-                        }
-                        .scaledToFill()
-                        .frame(width: 60, height: 60)
-                        .clipShape(Circle())
-                    } else {
-                        Circle()
-                            .fill(Color.gray)
-                            .frame(width: 40, height: 40)
-                    }
+                    EventProfileImage(urlString: event.profileImageURL)
+                }
+                
+                Text(event.description)
+                    .font(.system(size: 14, weight: .regular))
+                    .foregroundColor(.white)
+                
+                HStack {
+                    Text(event.address)
+                        .font(.system(size: 16, weight: .medium))
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    
                 }
             }
             .padding(.horizontal)
