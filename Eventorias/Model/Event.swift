@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
-struct Event: Identifiable {
-    let id = UUID()
+struct Event: Identifiable, Codable {
+    @DocumentID var id: String?
     var title: String
     var description: String
     var date: String

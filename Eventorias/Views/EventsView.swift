@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EventsView: View {
+    @StateObject private var eventManager = EventManager()
     @State private var searchText: String = ""
     
     var body: some View {
@@ -22,13 +23,22 @@ struct EventsView: View {
             SortingButton()
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            ScrollView {
-                VStack {
-                    Text("EventsView")
-                        .foregroundColor(.white)
-                        .padding()
+            List(eventManager.events) { event in
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(event.title)
+                        .font(.headline)
+                    Text(event.description)
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                    Text("\(event.date) - \(event.time)")
+                        .font(.caption)
                 }
+                .padding(.vertical, 4)
             }
+            .listStyle(.plain)
+        }
+        .onAppear {
+            eventManager.fetchEvents()
         }
         .appBackground
     }
