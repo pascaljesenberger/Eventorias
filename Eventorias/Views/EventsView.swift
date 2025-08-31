@@ -28,18 +28,36 @@ struct EventsView: View {
                     viewModel.filterAndSort()
                 }
             
-            ScrollView {
-                VStack(spacing: 12) {
-                    ForEach(viewModel.filteredEvents) { event in
-                        EventRow(
-                            imageURL: event.image,
-                            title: event.title,
-                            profileImageURL: event.profileImageURL,
-                            date: event.date
-                        )
+            if viewModel.hasError {
+                Spacer()
+                
+                ErrorMessage(onRetry: {
+                    viewModel.retryFetchEvents()
+                })
+                
+                Spacer()
+            } else if viewModel.isLoading {
+                Spacer()
+                
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    .scaleEffect(1.2)
+                
+                Spacer()
+            } else {
+                ScrollView {
+                    VStack(spacing: 12) {
+                        ForEach(viewModel.filteredEvents) { event in
+                            EventRow(
+                                imageURL: event.image,
+                                title: event.title,
+                                profileImageURL: event.profileImageURL,
+                                date: event.date
+                            )
+                        }
                     }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
             }
         }
         .onAppear {

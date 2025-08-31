@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ErrorMessage: View {
+    let onRetry: () -> Void
+    
     var body: some View {
         VStack(spacing: 10) {
             Circle()
@@ -32,7 +34,7 @@ struct ErrorMessage: View {
                 .multilineTextAlignment(.center)
             
             CustomButton(
-                action: { print("") },
+                action: onRetry,
                 title: "Try again",
                 width: 159,
                 height: 40
@@ -43,6 +45,6 @@ struct ErrorMessage: View {
 }
 
 #Preview {
-    ErrorMessage()
+    ErrorMessage(onRetry: {})
         .appBackground
 }

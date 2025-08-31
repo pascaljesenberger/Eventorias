@@ -20,9 +20,12 @@ class EventsViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var selectedSortOption: SortOption = .dateAsc
     @Published var filteredEvents: [Event] = []
+    @Published var isLoading: Bool = false
+    @Published var hasError: Bool = false
     
     private let eventManager = EventManager()
     private var allEvents: [Event] = []
+    private var cancellables = Set<AnyCancellable>()
     
     init() {
         eventManager.$events
@@ -32,13 +35,26 @@ class EventsViewModel: ObservableObject {
                 self?.filterAndSort()
             }
             .store(in: &cancellables)
+        
+        eventManager.$isLoading
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.isLoading, on: self)
+            .store(in: &cancellables)
+        
+        eventManager.$error
+            .receive(on: DispatchQueue.main)
+            .map { $0 != nil }
+            .assign(to: \.hasError, on: self)
+            .store(in: &cancellables)
     }
     
     func fetchEvents() {
         eventManager.fetchEvents()
     }
     
-    private var cancellables = Set<AnyCancellable>()
+    func retryFetchEvents() {
+        fetchEvents()
+    }
     
     func filterAndSort() {
         var result = allEvents
