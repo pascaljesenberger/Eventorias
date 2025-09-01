@@ -7,28 +7,28 @@
 
 import SwiftUI
 import MapKit
+import FirebaseFirestore
 
 struct MapIndicator: View {
-    let latitude: Double
-    let longitude: Double
-    
-    @State private var position: MapCameraPosition
+    let coordinate: CLLocationCoordinate2D
     
     init(latitude: Double, longitude: Double) {
-        self.latitude = latitude
-        self.longitude = longitude
-        
-        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let region = MKCoordinateRegion(
-            center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
+        self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
+    init(geoPoint: GeoPoint?) {
+        self.coordinate = CLLocationCoordinate2D(
+            latitude: geoPoint?.latitude ?? 48.8566,
+            longitude: geoPoint?.longitude ?? 2.3522
         )
-        _position = State(initialValue: MapCameraPosition.region(region))
     }
     
     var body: some View {
-        Map(position: $position, interactionModes: []) {
-            Marker("Position", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+        Map(initialPosition: .region(MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
+        )), interactionModes: []) {
+            Marker("Position", coordinate: coordinate)
                 .tint(.red)
         }
         .frame(width: 149, height: 72)

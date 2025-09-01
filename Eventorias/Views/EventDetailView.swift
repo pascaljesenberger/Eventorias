@@ -40,11 +40,11 @@ struct EventDetailView: View {
                     
                     Spacer()
                     
-                    
+                    MapIndicator(geoPoint: event.location)
                 }
             }
-            .padding(.horizontal)
         }
+        .padding(.horizontal)
         .appBackground
         .customBackToolbar(text: event.title)
     }

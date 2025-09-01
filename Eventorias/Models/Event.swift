@@ -17,4 +17,5 @@ struct Event: Identifiable, Codable {
     var address: String
     var image: String?
     var profileImageURL: String?
+    var location: GeoPoint?
 }
