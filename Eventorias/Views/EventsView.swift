@@ -55,6 +55,9 @@ struct EventsView: View {
                     }
                     .padding(.horizontal)
                 }
+                .refreshable {
+                    await viewModel.refreshEvents()
+                }
             }
         }
         .onAppear {

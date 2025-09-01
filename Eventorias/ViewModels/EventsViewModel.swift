@@ -56,6 +56,16 @@ class EventsViewModel: ObservableObject {
         fetchEvents()
     }
     
+    func refreshEvents() async {
+        if hasError {
+            hasError = false
+        }
+        
+        fetchEvents()
+        
+        try? await Task.sleep(nanoseconds: 500_000_000)
+    }
+    
     func filterAndSort() {
         var result = allEvents
         
