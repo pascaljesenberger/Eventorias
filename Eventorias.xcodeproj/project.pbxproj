@@ -56,6 +56,7 @@
 		C67ECFA12E65055A005CFCFD /* EventProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECFA02E65055A005CFCFD /* EventProfileImage.swift */; };
 		C67ED02F2E650CF7005CFCFD /* MapIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ED02E2E650CF7005CFCFD /* MapIndicator.swift */; };
 		C67ED0322E650D92005CFCFD /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = C67ED0312E650D92005CFCFD /* GoogleMaps */; };
+		C68711A32E65664F00379C27 /* EventCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68711A22E65664F00379C27 /* EventCreationView.swift */; };
 		C6ACAA722E5D2C81008B6C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6ACAA6D2E5D2C81008B6C63 /* Assets.xcassets */; };
 		C6ACAA732E5D2C81008B6C63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */; };
 		C6ACAA742E5D2C81008B6C63 /* EventoriasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA702E5D2C81008B6C63 /* EventoriasApp.swift */; };
@@ -112,6 +113,7 @@
 		C67ECF9E2E65052C005CFCFD /* EventInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoRow.swift; sourceTree = "<group>"; };
 		C67ECFA02E65055A005CFCFD /* EventProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProfileImage.swift; sourceTree = "<group>"; };
 		C67ED02E2E650CF7005CFCFD /* MapIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapIndicator.swift; sourceTree = "<group>"; };
+		C68711A22E65664F00379C27 /* EventCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationView.swift; sourceTree = "<group>"; };
 		C6ACAA422E5D2B9E008B6C63 /* Eventorias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA502E5D2B9F008B6C63 /* EventoriasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA5A2E5D2B9F008B6C63 /* EventoriasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +273,7 @@
 				C67ECF982E64FF70005CFCFD /* EventDetailView.swift */,
 				C64533982E60FCA7008714AB /* AuthenticationView.swift */,
 				C67ECF7A2E6273E2005CFCFD /* EventsView.swift */,
+				C68711A22E65664F00379C27 /* EventCreationView.swift */,
 				C6ACAA942E601C71008B6C63 /* Components */,
 			);
 			path = Views;
@@ -494,6 +497,7 @@
 				C67ECF7B2E6273E2005CFCFD /* EventsView.swift in Sources */,
 				C67ECF872E6292F2005CFCFD /* SortingButton.swift in Sources */,
 				C67ECF792E6273D2005CFCFD /* ProfileView.swift in Sources */,
+				C68711A32E65664F00379C27 /* EventCreationView.swift in Sources */,
 				C67ECF952E63F3B8005CFCFD /* ErrorMessage.swift in Sources */,
 				C67ECF8E2E63E2D1005CFCFD /* EventRow.swift in Sources */,
 				C67ECF9B2E65012E005CFCFD /* PreviewHelper.swift in Sources */,

@@ -48,12 +48,13 @@ class EventsViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func fetchEvents() {
-        eventManager.fetchEvents()
+    @MainActor
+    func fetchEvents() async {
+        await eventManager.fetchEvents()
     }
     
-    func retryFetchEvents() {
-        fetchEvents()
+    func retryFetchEvents() async {
+        await fetchEvents()
     }
     
     func refreshEvents() async {
@@ -61,7 +62,7 @@ class EventsViewModel: ObservableObject {
             hasError = false
         }
         
-        fetchEvents()
+        await fetchEvents()
         
         try? await Task.sleep(nanoseconds: 500_000_000)
     }

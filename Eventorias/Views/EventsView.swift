@@ -32,7 +32,9 @@ struct EventsView: View {
                 Spacer()
                 
                 ErrorMessage(onRetry: {
-                    viewModel.retryFetchEvents()
+                    Task {
+                        await viewModel.retryFetchEvents()
+                    }
                 })
                 
                 Spacer()
@@ -60,8 +62,8 @@ struct EventsView: View {
                 }
             }
         }
-        .onAppear {
-            viewModel.fetchEvents()
+        .task {
+            await viewModel.fetchEvents()
         }
         .appBackground
     }

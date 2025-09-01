@@ -15,30 +15,15 @@ class EventManager: ObservableObject {
     
     private let db = Firestore.firestore()
     
-    func fetchEvents() {
+    func fetchEvents() async {
         isLoading = true
         error = nil
-        
-        db.collection("Events").getDocuments { snapshot, error in
-            DispatchQueue.main.async {
-                self.isLoading = false
-                
-                if let error = error {
-                    print("Error fetching events: \(error)")
-                    self.error = error
-                    return
-                }
-                
-                guard let documents = snapshot?.documents else {
-                    self.error = NSError(domain: "EventManager", code: 0, userInfo: [NSLocalizedDescriptionKey: "No documents found"])
-                    return
-                }
-                
-                self.events = documents.compactMap { document in
-                    try? document.data(as: Event.self)
-                }
-                self.error = nil
-            }
+        do {
+            let snapshot = try await db.collection("Events").getDocuments()
+            events = snapshot.documents.compactMap { try? $0.data(as: Event.self) }
+        } catch {
+            self.error = error
         }
+        isLoading = false
     }
 }
