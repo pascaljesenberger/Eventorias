@@ -46,12 +46,11 @@ struct EventsView: View {
                 ScrollView {
                     VStack(spacing: 12) {
                         ForEach(viewModel.filteredEvents) { event in
-                            EventRow(
-                                imageURL: event.image,
-                                title: event.title,
-                                profileImageURL: event.profileImageURL,
-                                date: event.date
-                            )
+                            NavigationLink(destination: EventDetailView(event: event)
+                            ) {
+                                EventRow(event: event)
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                     .padding(.horizontal)

@@ -17,6 +17,7 @@ struct EventDetailView: View {
         ScrollView {
             VStack(spacing: 18) {
                 EventImage(imageURL: event.image)
+                    .padding(.top, 24)
                 
                 HStack {
                     VStack(alignment: .leading) {
