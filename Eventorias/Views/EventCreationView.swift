@@ -10,8 +10,9 @@ import SwiftUI
 struct EventCreationView: View {
     var body: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            
         }
+        .customBackToolbar(text: "Creation of an event")
         .appBackground
     }
 }

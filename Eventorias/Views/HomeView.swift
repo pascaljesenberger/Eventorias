@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var selectedTab: String = "Events"
+    @State private var showEventCreation = false
     let tabBarHeight: CGFloat = 56
-
+    
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
@@ -21,10 +22,12 @@ struct HomeView: View {
                 }
                 CustomTabBar(selectedTab: $selectedTab)
             }
-
+            
             if selectedTab == "Events" {
                 CustomButton(
-                    action: { print("") },
+                    action: {
+                        showEventCreation = true
+                    },
                     image: Image("PlusIcon"),
                     cornerRadius: 16,
                     width: 56,
@@ -35,6 +38,9 @@ struct HomeView: View {
                 .padding(.bottom, tabBarHeight + 12)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
             }
+        }
+        .navigationDestination(isPresented: $showEventCreation) {
+            EventCreationView()
         }
         .ignoresSafeArea(.keyboard)
         .appBackground
