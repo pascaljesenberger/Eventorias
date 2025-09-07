@@ -44,7 +44,7 @@ struct EventCreationView: View {
             HStack(spacing: 16) {
                 Spacer()
                 CustomButton(
-                    action: {},
+                    action: { viewModel.showCamera = true },
                     image: Image("CameraIcon"),
                     cornerRadius: 16,
                     backgroundColor: .white,
@@ -74,6 +74,9 @@ struct EventCreationView: View {
         .padding()
         .customBackToolbar(text: "Creation of an event")
         .appBackground
+        .fullScreenCover(isPresented: $viewModel.showCamera) {
+            ImagePicker(sourceType: .camera, selectedImage: $viewModel.eventImage)
+        }
     }
 }
 

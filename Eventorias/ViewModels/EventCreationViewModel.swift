@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class EventCreationViewModel: ObservableObject {
     @Published var eventName = ""
@@ -13,4 +14,6 @@ class EventCreationViewModel: ObservableObject {
     @Published var eventDate = ""
     @Published var eventTime = ""
     @Published var eventAddress = ""
+    @Published var eventImage: UIImage?
+    @Published var showCamera = false
 }
