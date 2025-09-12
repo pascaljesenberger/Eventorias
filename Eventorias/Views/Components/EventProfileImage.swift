@@ -22,9 +22,11 @@ struct EventProfileImage: View {
             .frame(width: imageSize, height: imageSize)
             .clipShape(Circle())
         } else {
-            Circle()
-                .fill(Color.gray)
+            Image(systemName: "person.crop.circle")
+                .resizable()
+                .scaledToFit()
                 .frame(width: 40, height: 40)
+                .foregroundColor(Color.appRed)
         }
     }
 }

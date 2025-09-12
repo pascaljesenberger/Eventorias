@@ -48,4 +48,5 @@ FirebaseDebugSymbols/
 
 # Temporary files
 *.tmp
-*.temp
+*.tempSecret.plist
+Eventorias/Configuration/Secret.plist

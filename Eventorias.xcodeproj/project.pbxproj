@@ -59,6 +59,10 @@
 		C68711A32E65664F00379C27 /* EventCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68711A22E65664F00379C27 /* EventCreationView.swift */; };
 		C687122F2E6B85EA00379C27 /* EventCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687122E2E6B85EA00379C27 /* EventCreationViewModel.swift */; };
 		C68712312E6D3FD400379C27 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68712302E6D3FD400379C27 /* ImagePicker.swift */; };
+		C68712352E6D47A000379C27 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68712342E6D47A000379C27 /* PhotoPicker.swift */; };
+		C68713AA2E71DBB000379C27 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68713A92E71DBB000379C27 /* ProfileViewModel.swift */; };
+		C68714BB2E738A8600379C27 /* ImageUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714BA2E738A8600379C27 /* ImageUploadService.swift */; };
+		C68714BF2E7432E300379C27 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = C68714BE2E7432E300379C27 /* Secret.plist */; };
 		C6ACAA722E5D2C81008B6C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6ACAA6D2E5D2C81008B6C63 /* Assets.xcassets */; };
 		C6ACAA732E5D2C81008B6C63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */; };
 		C6ACAA742E5D2C81008B6C63 /* EventoriasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA702E5D2C81008B6C63 /* EventoriasApp.swift */; };
@@ -118,6 +122,10 @@
 		C68711A22E65664F00379C27 /* EventCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationView.swift; sourceTree = "<group>"; };
 		C687122E2E6B85EA00379C27 /* EventCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationViewModel.swift; sourceTree = "<group>"; };
 		C68712302E6D3FD400379C27 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C68712342E6D47A000379C27 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		C68713A92E71DBB000379C27 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		C68714BA2E738A8600379C27 /* ImageUploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadService.swift; sourceTree = "<group>"; };
+		C68714BE2E7432E300379C27 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
 		C6ACAA422E5D2B9E008B6C63 /* Eventorias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA502E5D2B9F008B6C63 /* EventoriasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA5A2E5D2B9F008B6C63 /* EventoriasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +196,7 @@
 				C67ECF102E611E57005CFCFD /* AuthenticationViewModel.swift */,
 				C67ECF922E63F122005CFCFD /* EventsViewModel.swift */,
 				C687122E2E6B85EA00379C27 /* EventCreationViewModel.swift */,
+				C68713A92E71DBB000379C27 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,6 +216,8 @@
 				C67ECF8F2E63E8E2005CFCFD /* DateHelper.swift */,
 				C67ECF9A2E65012E005CFCFD /* PreviewHelper.swift */,
 				C68712302E6D3FD400379C27 /* ImagePicker.swift */,
+				C68712342E6D47A000379C27 /* PhotoPicker.swift */,
+				C68714BA2E738A8600379C27 /* ImageUploadService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -236,9 +247,9 @@
 				C6ACAA932E601A8F008B6C63 /* Configuration */,
 				C6ACAA902E6019B8008B6C63 /* App */,
 				C67ECF882E6299B9005CFCFD /* Models */,
+				C67ECF0F2E611E45005CFCFD /* ViewModels */,
 				C6ACAA8E2E60194D008B6C63 /* Views */,
 				C67ECF912E63E8EE005CFCFD /* Helpers */,
-				C67ECF0F2E611E45005CFCFD /* ViewModels */,
 				C6ACAA8F2E601979008B6C63 /* Resources */,
 			);
 			path = Eventorias;
@@ -308,6 +319,7 @@
 			children = (
 				C6ACAA6F2E5D2C81008B6C63 /* Eventorias.entitlements */,
 				C67ECF1A2E62640C005CFCFD /* GoogleService-Info.plist */,
+				C68714BE2E7432E300379C27 /* Secret.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -473,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68714BF2E7432E300379C27 /* Secret.plist in Resources */,
 				C67ECF1B2E62640C005CFCFD /* GoogleService-Info.plist in Resources */,
 				C6ACAA722E5D2C81008B6C63 /* Assets.xcassets in Resources */,
 			);
@@ -527,7 +540,10 @@
 				C64533992E60FCA7008714AB /* AuthenticationView.swift in Sources */,
 				C67ECF9F2E65052C005CFCFD /* EventInfoRow.swift in Sources */,
 				C6ACAA732E5D2C81008B6C63 /* HomeView.swift in Sources */,
+				C68712352E6D47A000379C27 /* PhotoPicker.swift in Sources */,
 				C67ECF112E611E58005CFCFD /* AuthenticationViewModel.swift in Sources */,
+				C68713AA2E71DBB000379C27 /* ProfileViewModel.swift in Sources */,
+				C68714BB2E738A8600379C27 /* ImageUploadService.swift in Sources */,
 				C67ECF7D2E627431005CFCFD /* TabBarItem.swift in Sources */,
 				C67ECF9D2E6504F3005CFCFD /* EventImage.swift in Sources */,
 				C6ACAA742E5D2C81008B6C63 /* EventoriasApp.swift in Sources */,

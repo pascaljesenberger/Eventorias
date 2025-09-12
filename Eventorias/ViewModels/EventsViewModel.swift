@@ -64,7 +64,7 @@ class EventsViewModel: ObservableObject {
         
         await fetchEvents()
         
-        try? await Task.sleep(nanoseconds: 500_000_000)
+        try? await Task.sleep(nanoseconds: 800_000_000)
     }
     
     func filterAndSort() {

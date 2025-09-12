@@ -19,6 +19,8 @@ class AuthenticationViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
     @Published var showSignupConfirmation = false
+    @Published var showAlert = false
+    @Published var alertMessage = ""
     @Published var isEmailValid = true
     @Published var isPasswordValid = true
 
@@ -109,22 +111,23 @@ class AuthenticationViewModel: ObservableObject {
     private func handleAuthError(_ error: NSError) {
         switch error.code {
         case AuthErrorCode.invalidEmail.rawValue:
-            errorMessage = "Invalid email address"
+            alertMessage = "Invalid email address"
         case AuthErrorCode.wrongPassword.rawValue:
-            errorMessage = "Incorrect password"
+            alertMessage = "Incorrect password"
         case AuthErrorCode.userNotFound.rawValue:
-            errorMessage = "No account found with this email"
+            alertMessage = "No account found with this email"
         case AuthErrorCode.emailAlreadyInUse.rawValue:
-            errorMessage = "An account already exists with this email"
+            alertMessage = "An account already exists with this email"
         case AuthErrorCode.weakPassword.rawValue:
-            errorMessage = "Password is too weak"
+            alertMessage = "Password is too weak"
         case AuthErrorCode.networkError.rawValue:
-            errorMessage = "Network error. Please check your connection"
+            alertMessage = "Network error. Please check your connection"
         case AuthErrorCode.tooManyRequests.rawValue:
-            errorMessage = "Too many requests. Please try again later"
+            alertMessage = "Too many requests. Please try again later"
         default:
-            errorMessage = "Authentication failed. Please try again"
+            alertMessage = "Authentication failed: \(error.localizedDescription)"
         }
+        showAlert = true
     }
 
     private func isValidEmail(_ email: String) -> Bool {

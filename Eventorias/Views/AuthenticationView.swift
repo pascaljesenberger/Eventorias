@@ -20,7 +20,7 @@ struct AuthenticationView: View {
     }
 
     var body: some View {
-        ScrollView {
+        ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 Text("Sign In / Sign Up")
                     .font(.system(size: 34, weight: .bold))
@@ -73,6 +73,11 @@ struct AuthenticationView: View {
             }
         } message: {
             Text("No account found with this email. Would you like to create a new account?")
+        }
+        .alert("Error", isPresented: $viewModel.showAlert) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(viewModel.alertMessage)
         }
     }
 }
