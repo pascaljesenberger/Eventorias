@@ -16,7 +16,7 @@ class ImageUploadService {
         guard let path = Bundle.main.path(forResource: "Secret", ofType: "plist"),
               let plist = NSDictionary(contentsOfFile: path),
               let key = plist["IMGBB_API_KEY"] as? String else {
-            fatalError("Secret.plist manquant ou clé API introuvable")
+            fatalError("Secret.plist not found or API key missing.")
         }
         self.apiKey = key
     }
