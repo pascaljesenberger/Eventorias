@@ -63,10 +63,19 @@
 		C68713AA2E71DBB000379C27 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68713A92E71DBB000379C27 /* ProfileViewModel.swift */; };
 		C68714BB2E738A8600379C27 /* ImageUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714BA2E738A8600379C27 /* ImageUploadService.swift */; };
 		C68714BF2E7432E300379C27 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = C68714BE2E7432E300379C27 /* Secret.plist */; };
+		C68714C42E777A9100379C27 /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714C32E777A9100379C27 /* AuthenticationViewModelTests.swift */; };
+		C68714C52E777A9100379C27 /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714C32E777A9100379C27 /* AuthenticationViewModelTests.swift */; };
+		C68714C72E777AAD00379C27 /* EventCreationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714C62E777AAD00379C27 /* EventCreationViewModelTests.swift */; };
+		C68714C82E777AAD00379C27 /* EventCreationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714C62E777AAD00379C27 /* EventCreationViewModelTests.swift */; };
+		C68714CA2E777AC400379C27 /* EventsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714C92E777AC400379C27 /* EventsViewModelTests.swift */; };
+		C68714CB2E777AC400379C27 /* EventsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714C92E777AC400379C27 /* EventsViewModelTests.swift */; };
+		C68714CD2E777AE300379C27 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714CC2E777AE300379C27 /* ProfileViewModelTests.swift */; };
+		C68714CE2E777AE300379C27 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714CC2E777AE300379C27 /* ProfileViewModelTests.swift */; };
+		C68714D02E777AFA00379C27 /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714CF2E777AFA00379C27 /* DateHelperTests.swift */; };
+		C68714D12E777AFA00379C27 /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68714CF2E777AFA00379C27 /* DateHelperTests.swift */; };
 		C6ACAA722E5D2C81008B6C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6ACAA6D2E5D2C81008B6C63 /* Assets.xcassets */; };
 		C6ACAA732E5D2C81008B6C63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */; };
 		C6ACAA742E5D2C81008B6C63 /* EventoriasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA702E5D2C81008B6C63 /* EventoriasApp.swift */; };
-		C6ACAA772E5D2C84008B6C63 /* EventoriasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA752E5D2C84008B6C63 /* EventoriasTests.swift */; };
 		C6ACAA7B2E5D2C86008B6C63 /* EventoriasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA782E5D2C86008B6C63 /* EventoriasUITests.swift */; };
 		C6ACAA7C2E5D2C86008B6C63 /* EventoriasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA792E5D2C86008B6C63 /* EventoriasUITestsLaunchTests.swift */; };
 		C6ACAA8C2E601897008B6C63 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ACAA8B2E601897008B6C63 /* WelcomeView.swift */; };
@@ -126,6 +135,11 @@
 		C68713A92E71DBB000379C27 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		C68714BA2E738A8600379C27 /* ImageUploadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadService.swift; sourceTree = "<group>"; };
 		C68714BE2E7432E300379C27 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
+		C68714C32E777A9100379C27 /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
+		C68714C62E777AAD00379C27 /* EventCreationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationViewModelTests.swift; sourceTree = "<group>"; };
+		C68714C92E777AC400379C27 /* EventsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModelTests.swift; sourceTree = "<group>"; };
+		C68714CC2E777AE300379C27 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
+		C68714CF2E777AFA00379C27 /* DateHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
 		C6ACAA422E5D2B9E008B6C63 /* Eventorias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA502E5D2B9F008B6C63 /* EventoriasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA5A2E5D2B9F008B6C63 /* EventoriasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +147,6 @@
 		C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C6ACAA6F2E5D2C81008B6C63 /* Eventorias.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eventorias.entitlements; sourceTree = "<group>"; };
 		C6ACAA702E5D2C81008B6C63 /* EventoriasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasApp.swift; sourceTree = "<group>"; };
-		C6ACAA752E5D2C84008B6C63 /* EventoriasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasTests.swift; sourceTree = "<group>"; };
 		C6ACAA782E5D2C86008B6C63 /* EventoriasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasUITests.swift; sourceTree = "<group>"; };
 		C6ACAA792E5D2C86008B6C63 /* EventoriasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C6ACAA8B2E601897008B6C63 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -287,7 +300,11 @@
 		C6ACAA762E5D2C84008B6C63 /* EventoriasTests */ = {
 			isa = PBXGroup;
 			children = (
-				C6ACAA752E5D2C84008B6C63 /* EventoriasTests.swift */,
+				C68714C32E777A9100379C27 /* AuthenticationViewModelTests.swift */,
+				C68714C62E777AAD00379C27 /* EventCreationViewModelTests.swift */,
+				C68714C92E777AC400379C27 /* EventsViewModelTests.swift */,
+				C68714CC2E777AE300379C27 /* ProfileViewModelTests.swift */,
+				C68714CF2E777AFA00379C27 /* DateHelperTests.swift */,
 			);
 			path = EventoriasTests;
 			sourceTree = "<group>";
@@ -313,12 +330,12 @@
 		C6ACAA8E2E60194D008B6C63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C67ECF782E6273D2005CFCFD /* ProfileView.swift */,
-				C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */,
 				C6ACAA8B2E601897008B6C63 /* WelcomeView.swift */,
-				C67ECF982E64FF70005CFCFD /* EventDetailView.swift */,
 				C64533982E60FCA7008714AB /* AuthenticationView.swift */,
+				C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */,
 				C67ECF7A2E6273E2005CFCFD /* EventsView.swift */,
+				C67ECF782E6273D2005CFCFD /* ProfileView.swift */,
+				C67ECF982E64FF70005CFCFD /* EventDetailView.swift */,
 				C68711A22E65664F00379C27 /* EventCreationView.swift */,
 				C6ACAA942E601C71008B6C63 /* Components */,
 			);
@@ -463,6 +480,7 @@
 					};
 					C6ACAA4F2E5D2B9F008B6C63 = {
 						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
 						TestTargetID = C6ACAA412E5D2B9E008B6C63;
 					};
 					C6ACAA592E5D2B9F008B6C63 = {
@@ -572,7 +590,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6ACAA772E5D2C84008B6C63 /* EventoriasTests.swift in Sources */,
+				C68714C72E777AAD00379C27 /* EventCreationViewModelTests.swift in Sources */,
+				C68714CD2E777AE300379C27 /* ProfileViewModelTests.swift in Sources */,
+				C68714CA2E777AC400379C27 /* EventsViewModelTests.swift in Sources */,
+				C68714C52E777A9100379C27 /* AuthenticationViewModelTests.swift in Sources */,
+				C68714D02E777AFA00379C27 /* DateHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,8 +602,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68714C82E777AAD00379C27 /* EventCreationViewModelTests.swift in Sources */,
+				C68714CE2E777AE300379C27 /* ProfileViewModelTests.swift in Sources */,
+				C68714C42E777A9100379C27 /* AuthenticationViewModelTests.swift in Sources */,
+				C68714D12E777AFA00379C27 /* DateHelperTests.swift in Sources */,
 				C6ACAA7B2E5D2C86008B6C63 /* EventoriasUITests.swift in Sources */,
 				C6ACAA7C2E5D2C86008B6C63 /* EventoriasUITestsLaunchTests.swift in Sources */,
+				C68714CB2E777AC400379C27 /* EventsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +832,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GJ746626DJ;
@@ -818,6 +846,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eventorias.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Eventorias";
@@ -829,6 +858,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GJ746626DJ;
