@@ -210,16 +210,46 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C67ECF912E63E8EE005CFCFD /* Helpers */ = {
+		C68714C02E772D2E00379C27 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C67ECF8F2E63E8E2005CFCFD /* DateHelper.swift */,
-				C67ECF9A2E65012E005CFCFD /* PreviewHelper.swift */,
+				C67ECF842E6283A9005CFCFD /* CustomSearchBar.swift */,
+				C6ACAA952E601C81008B6C63 /* AppBackground.swift */,
+				C67ECF962E640B3F005CFCFD /* LoadingIndicator.swift */,
+				C67ECF942E63F3B8005CFCFD /* ErrorMessage.swift */,
+				C67ECF0D2E610E10005CFCFD /* CustomTextField.swift */,
+				C67ECF7F2E6277D3005CFCFD /* CustomTabBar.swift */,
+				C67ECF0B2E610359005CFCFD /* CustomBackToolbar.swift */,
+				C67ECF7C2E627431005CFCFD /* TabBarItem.swift */,
+				C6ACAA972E601DFF008B6C63 /* AppButton.swift */,
+				C67ECF092E610220005CFCFD /* BarBackButton.swift */,
+				C67ECF862E6292F2005CFCFD /* SortingButton.swift */,
+				C67ED02E2E650CF7005CFCFD /* MapIndicator.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C68714C12E772D6100379C27 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				C67ECF8D2E63E2D1005CFCFD /* EventRow.swift */,
+				C67ECF9C2E6504F3005CFCFD /* EventImage.swift */,
+				C67ECF9E2E65052C005CFCFD /* EventInfoRow.swift */,
+				C67ECFA02E65055A005CFCFD /* EventProfileImage.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		C68714C22E772D7300379C27 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
 				C68712302E6D3FD400379C27 /* ImagePicker.swift */,
 				C68712342E6D47A000379C27 /* PhotoPicker.swift */,
+				C67ECF8F2E63E8E2005CFCFD /* DateHelper.swift */,
+				C67ECF9A2E65012E005CFCFD /* PreviewHelper.swift */,
 				C68714BA2E738A8600379C27 /* ImageUploadService.swift */,
 			);
-			path = Helpers;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C6ACAA392E5D2B9E008B6C63 = {
@@ -249,7 +279,6 @@
 				C67ECF882E6299B9005CFCFD /* Models */,
 				C67ECF0F2E611E45005CFCFD /* ViewModels */,
 				C6ACAA8E2E60194D008B6C63 /* Views */,
-				C67ECF912E63E8EE005CFCFD /* Helpers */,
 				C6ACAA8F2E601979008B6C63 /* Resources */,
 			);
 			path = Eventorias;
@@ -327,22 +356,9 @@
 		C6ACAA942E601C71008B6C63 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C67ECF842E6283A9005CFCFD /* CustomSearchBar.swift */,
-				C6ACAA952E601C81008B6C63 /* AppBackground.swift */,
-				C67ECF962E640B3F005CFCFD /* LoadingIndicator.swift */,
-				C67ECF942E63F3B8005CFCFD /* ErrorMessage.swift */,
-				C67ECF0D2E610E10005CFCFD /* CustomTextField.swift */,
-				C67ECF7F2E6277D3005CFCFD /* CustomTabBar.swift */,
-				C67ECF0B2E610359005CFCFD /* CustomBackToolbar.swift */,
-				C67ECF7C2E627431005CFCFD /* TabBarItem.swift */,
-				C6ACAA972E601DFF008B6C63 /* AppButton.swift */,
-				C67ECF092E610220005CFCFD /* BarBackButton.swift */,
-				C67ECF8D2E63E2D1005CFCFD /* EventRow.swift */,
-				C67ECF862E6292F2005CFCFD /* SortingButton.swift */,
-				C67ECF9C2E6504F3005CFCFD /* EventImage.swift */,
-				C67ECF9E2E65052C005CFCFD /* EventInfoRow.swift */,
-				C67ECFA02E65055A005CFCFD /* EventProfileImage.swift */,
-				C67ED02E2E650CF7005CFCFD /* MapIndicator.swift */,
+				C68714C12E772D6100379C27 /* Event */,
+				C68714C02E772D2E00379C27 /* UI */,
+				C68714C22E772D7300379C27 /* Utils */,
 			);
 			path = Components;
 			sourceTree = "<group>";
