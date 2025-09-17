@@ -9,16 +9,20 @@ import Foundation
 import UIKit
 
 class ImageUploadService {
-    private let apiKey: String
-    private let uploadURL = "https://api.imgbb.com/1/upload"
-    
-    init() {
-        guard let path = Bundle.main.path(forResource: "Secret", ofType: "plist"),
-              let plist = NSDictionary(contentsOfFile: path),
-              let key = plist["IMGBB_API_KEY"] as? String else {
-            fatalError("Secret.plist not found or API key missing.")
+    let apiKey: String
+    let uploadURL = "https://api.imgbb.com/1/upload"
+
+    init(apiKey: String? = nil) {
+        if let key = apiKey {
+            self.apiKey = key
+        } else {
+            guard let path = Bundle.main.path(forResource: "Secret", ofType: "plist"),
+                  let plist = NSDictionary(contentsOfFile: path),
+                  let key = plist["IMGBB_API_KEY"] as? String else {
+                fatalError("Secret.plist not found or API key missing.")
+            }
+            self.apiKey = key
         }
-        self.apiKey = key
     }
     
     func uploadImage(_ image: UIImage, completion: @escaping (Result<String, Error>) -> Void) {

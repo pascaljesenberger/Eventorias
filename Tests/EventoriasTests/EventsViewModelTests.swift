@@ -8,43 +8,72 @@
 import XCTest
 @testable import Eventorias
 
-struct MockEvent {
-    let title: String
-    let description: String
-    let date: String
-}
-
-class EventsViewModelTests: XCTestCase {
+@MainActor
+final class EventsViewModelTests: XCTestCase {
     var viewModel: EventsViewModel!
+    var mockEventManager: MockEventManager!
     
     override func setUp() {
-        viewModel = EventsViewModel()
+        super.setUp()
+        mockEventManager = MockEventManager()
+        viewModel = EventsViewModel(eventManager: mockEventManager)
     }
     
-    func testSearchFiltering() {
+    override func tearDown() {
+        viewModel = nil
+        mockEventManager = nil
+        super.tearDown()
+    }
+    
+    func testInitialState() {
+        XCTAssertEqual(viewModel.searchText, "")
+        XCTAssertEqual(viewModel.selectedSortOption, .dateAsc)
+        XCTAssertEqual(viewModel.filteredEvents.count, 0)
+        XCTAssertFalse(viewModel.isLoading)
+        XCTAssertFalse(viewModel.hasError)
+    }
+    
+    func testFilterAndSort() {
         let events = [
-            MockEvent(title: "Concert Jazz", description: "Musique", date: "2025-12-01"),
-            MockEvent(title: "Festival Rock", description: "Concert", date: "2025-12-02")
+            Event(id: "1", title: "Jazz Concert", description: "Evening jazz", date: "2024-01-15", time: "20:00", address: "Hall", image: nil, profileImageURL: nil, location: nil),
+            Event(id: "2", title: "Tech Conference", description: "Tech trends", date: "2024-02-20", time: "09:00", address: "Center", image: nil, profileImageURL: nil, location: nil),
+            Event(id: "3", title: "Summer Festival", description: "Music festival", date: "2024-03-10", time: "14:00", address: "Park", image: nil, profileImageURL: nil, location: nil)
         ]
-        
         viewModel.allEvents = events
-        viewModel.searchText = "Jazz"
+        
+        viewModel.searchText = "tech"
+        viewModel.selectedSortOption = .titleAsc
         viewModel.filterAndSort()
         
         XCTAssertEqual(viewModel.filteredEvents.count, 1)
-        XCTAssertEqual(viewModel.filteredEvents.first?.title, "Concert Jazz")
-    }
-    
-    func testDateSorting() {
-        let events = [
-            MockEvent(title: "Event B", description: "", date: "2025-12-02"),
-            MockEvent(title: "Event A", description: "", date: "2025-12-01")
-        ]
+        XCTAssertEqual(viewModel.filteredEvents.first?.title, "Tech Conference")
         
-        viewModel.allEvents = events
-        viewModel.selectedSortOption = .dateAsc
+        viewModel.searchText = ""
+        viewModel.selectedSortOption = .dateDesc
         viewModel.filterAndSort()
         
-        XCTAssertEqual(viewModel.filteredEvents.first?.title, "Event A")
+        XCTAssertEqual(viewModel.filteredEvents.map(\.date), ["2024-03-10", "2024-02-20", "2024-01-15"])
+    }
+    
+    func testFetchEventsSetsProperties() async {
+        mockEventManager.shouldSucceed = true
+        await viewModel.fetchEvents()
+        
+        try? await Task.sleep(nanoseconds: 100_000_000)
+        
+        XCTAssertTrue(mockEventManager.fetchEventsCalled)
+        XCTAssertFalse(viewModel.isLoading)
+        XCTAssertFalse(viewModel.hasError)
+        XCTAssertEqual(viewModel.allEvents.count, 1)
+    }
+    
+    func testErrorHandling() async {
+        mockEventManager.shouldSucceed = false
+        await viewModel.fetchEvents()
+        
+        try? await Task.sleep(nanoseconds: 100_000_000)
+        
+        XCTAssertTrue(viewModel.hasError)
+        XCTAssertFalse(viewModel.isLoading)
     }
 }

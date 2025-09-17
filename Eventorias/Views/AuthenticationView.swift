@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AuthenticationView: View {
-    @StateObject private var viewModel: AuthenticationViewModel
-    @FocusState private var focusedField: Field?
+    @StateObject var viewModel: AuthenticationViewModel
+    @FocusState var focusedField: Field?
 
     enum Field {
         case email, password

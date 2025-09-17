@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomBackToolbar: ViewModifier {
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismiss) var dismiss
     var text: String? = nil
 
     func body(content: Content) -> some View {

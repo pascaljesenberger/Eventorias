@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct EventoriasApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject private var authManager = AuthManager()
+    @StateObject var authManager = AuthManager()
     
     var body: some Scene {
         WindowGroup {

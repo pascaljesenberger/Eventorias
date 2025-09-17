@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoadingIndicator: View {
-    @State private var rotation: Double = 0
+    @State var rotation: Double = 0
     
     var body: some View {
         Image("LoadingIcon")

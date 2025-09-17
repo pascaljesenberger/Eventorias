@@ -9,8 +9,8 @@ import SwiftUI
 import FirebaseAuth
 
 struct ProfileView: View {
-    @StateObject private var viewModel = ProfileViewModel()
-    @FocusState private var nameFieldFocused: Bool
+    @StateObject var viewModel = ProfileViewModel()
+    @FocusState var nameFieldFocused: Bool
     
     var body: some View {
         VStack {

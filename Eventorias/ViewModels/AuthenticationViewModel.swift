@@ -34,7 +34,7 @@ class AuthenticationViewModel: ObservableObject {
         case email, password
     }
 
-    private func validate(_ field: Field) {
+    func validate(_ field: Field) {
         switch field {
         case .email:
             isEmailValid = isValidEmail(email)
@@ -44,7 +44,7 @@ class AuthenticationViewModel: ObservableObject {
         updateErrorMessage()
     }
 
-    private func updateErrorMessage() {
+    func updateErrorMessage() {
         if !isEmailValid {
             errorMessage = "Invalid email format"
         } else if !isPasswordValid {
@@ -108,7 +108,7 @@ class AuthenticationViewModel: ObservableObject {
         }
     }
 
-    private func handleAuthError(_ error: NSError) {
+    func handleAuthError(_ error: NSError) {
         switch error.code {
         case AuthErrorCode.invalidEmail.rawValue:
             alertMessage = "Invalid email address"
@@ -130,12 +130,12 @@ class AuthenticationViewModel: ObservableObject {
         showAlert = true
     }
 
-    private func isValidEmail(_ email: String) -> Bool {
+    func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         return NSPredicate(format: "SELF MATCHES %@", emailRegEx).evaluate(with: email)
     }
 
-    private func isValidPassword(_ password: String) -> Bool {
+    func isValidPassword(_ password: String) -> Bool {
         let passwordRegEx = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d@$!%*?&]{8,}$"
         return NSPredicate(format: "SELF MATCHES %@", passwordRegEx).evaluate(with: password)
     }

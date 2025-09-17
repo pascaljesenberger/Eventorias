@@ -28,8 +28,8 @@ class EventCreationViewModel: ObservableObject {
     @Published var alertMessage = ""
     @Published var shouldDismiss = false
     
-    private let imageUploadService = ImageUploadService()
-    private let db = Firestore.firestore()
+    let imageUploadService = ImageUploadService()
+    let db = Firestore.firestore()
     
     var canSubmit: Bool {
         !eventName.isEmpty &&
@@ -41,7 +41,7 @@ class EventCreationViewModel: ObservableObject {
         !isCreatingEvent
     }
     
-    private func validateFields() {
+    func validateFields() {
         if eventName.isEmpty || eventDescription.isEmpty || eventAddress.isEmpty {
             errorMessage = "Please fill in all fields"
         } else if eventImage == nil {
@@ -55,14 +55,14 @@ class EventCreationViewModel: ObservableObject {
         }
     }
     
-    private func isDateValid() -> Bool {
+    func isDateValid() -> Bool {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
         guard let date = formatter.date(from: eventDate) else { return false }
         return Calendar.current.startOfDay(for: date) >= Calendar.current.startOfDay(for: Date())
     }
     
-    private func isTimeValid() -> Bool {
+    func isTimeValid() -> Bool {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH : mm"
         return formatter.date(from: eventTime) != nil
@@ -124,7 +124,7 @@ class EventCreationViewModel: ObservableObject {
         }
     }
     
-    private func saveEventToFirestore() {
+    func saveEventToFirestore() {
         let event = Event(
             title: eventName,
             description: eventDescription,

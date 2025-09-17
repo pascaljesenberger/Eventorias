@@ -23,11 +23,22 @@ class EventsViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var hasError: Bool = false
     
-    private let eventManager = EventManager()
-    private var allEvents: [Event] = []
-    private var cancellables = Set<AnyCancellable>()
+    var eventManager: EventManager {
+        didSet {
+            setupBindings()
+        }
+    }
+    var allEvents: [Event] = []
+    var cancellables = Set<AnyCancellable>()
     
-    init() {
+    init(eventManager: EventManager = EventManager()) {
+        self.eventManager = eventManager
+        setupBindings()
+    }
+    
+    private func setupBindings() {
+        cancellables.removeAll()
+        
         eventManager.$events
             .receive(on: DispatchQueue.main)
             .sink { [weak self] events in

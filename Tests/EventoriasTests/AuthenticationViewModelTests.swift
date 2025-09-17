@@ -6,13 +6,8 @@
 //
 
 import XCTest
+import FirebaseAuth
 @testable import Eventorias
-
-class MockAuthManager: AuthManager {
-    override init() {
-        super.init()
-    }
-}
 
 class AuthenticationViewModelTests: XCTestCase {
     var viewModel: AuthenticationViewModel!
@@ -46,5 +41,32 @@ class AuthenticationViewModelTests: XCTestCase {
         
         viewModel.isLoading = true
         XCTAssertFalse(viewModel.canSubmit)
+    }
+    
+    func testHandleAuthError_WrongPassword() {
+        let error = NSError(domain: "FIRAuthErrorDomain", code: AuthErrorCode.wrongPassword.rawValue, userInfo: nil)
+        
+        viewModel.handleAuthError(error)
+        
+        XCTAssertTrue(viewModel.showAlert)
+        XCTAssertEqual(viewModel.alertMessage, "Incorrect password")
+    }
+    
+    func testHandleAuthError_EmailAlreadyInUse() {
+        let error = NSError(domain: "FIRAuthErrorDomain", code: AuthErrorCode.emailAlreadyInUse.rawValue, userInfo: nil)
+        
+        viewModel.handleAuthError(error)
+        
+        XCTAssertTrue(viewModel.showAlert)
+        XCTAssertEqual(viewModel.alertMessage, "An account already exists with this email")
+    }
+    
+    func testHandleAuthError_UserNotFound() {
+        let error = NSError(domain: "FIRAuthErrorDomain", code: AuthErrorCode.userNotFound.rawValue, userInfo: nil)
+        
+        viewModel.handleAuthError(error)
+        
+        XCTAssertTrue(viewModel.showAlert)
+        XCTAssertEqual(viewModel.alertMessage, "No account found with this email")
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WelcomeView: View {
     @ObservedObject var authManager: AuthManager
-    @State private var showSignIn = false
+    @State var showSignIn = false
 
     var body: some View {
         VStack(spacing: 64) {

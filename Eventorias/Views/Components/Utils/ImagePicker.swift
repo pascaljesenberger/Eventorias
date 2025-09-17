@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 
 struct ImagePicker: UIViewControllerRepresentable {
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.presentationMode) var presentationMode
     var sourceType: UIImagePickerController.SourceType = .camera
     @Binding var selectedImage: UIImage?
 

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var selectedTab: String = "Events"
-    @State private var showEventCreation = false
+    @State var selectedTab: String = "Events"
+    @State var showEventCreation = false
     let tabBarHeight: CGFloat = 56
     
     var body: some View {

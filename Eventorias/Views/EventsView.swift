@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventsView: View {
-    @StateObject private var viewModel = EventsViewModel()
+    @StateObject var viewModel = EventsViewModel()
     
     var body: some View {
         VStack(spacing: 14) {

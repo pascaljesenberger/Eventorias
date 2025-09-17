@@ -10,7 +10,7 @@ import SwiftUI
 struct EventRow: View {
     var event: Event
     
-    private var formattedDate: String {
+    var formattedDate: String {
         DateHelper.formatDate(event.date)
     }
     

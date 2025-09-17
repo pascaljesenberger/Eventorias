@@ -10,8 +10,8 @@ import SwiftUI
 struct EventDetailView: View {
     var event: Event
     
-    private var formattedDate: String { DateHelper.formatDate(event.date) }
-    private var formattedTime: String { DateHelper.formatTime(event.time) }
+    var formattedDate: String { DateHelper.formatDate(event.date) }
+    var formattedTime: String { DateHelper.formatTime(event.time) }
     
     var body: some View {
         ScrollView {

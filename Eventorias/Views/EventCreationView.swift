@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct EventCreationView: View {
-    @StateObject private var viewModel = EventCreationViewModel()
-    @Environment(\.dismiss) private var dismiss
+    @StateObject var viewModel = EventCreationViewModel()
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {

@@ -13,7 +13,7 @@ class EventManager: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var error: Error?
     
-    private let db = Firestore.firestore()
+    let db = Firestore.firestore()
     
     func fetchEvents() async {
         isLoading = true
