@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C63B90FE2E7CADAB00A1B132 /* EventoriasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63B90FB2E7CADAB00A1B132 /* EventoriasUITests.swift */; };
+		C63B90FF2E7CADAB00A1B132 /* EventoriasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63B90FC2E7CADAB00A1B132 /* EventoriasUITestsLaunchTests.swift */; };
+		C63B91652E7CB36100A1B132 /* EventCreationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63B91642E7CB36100A1B132 /* EventCreationUITests.swift */; };
+		C63B91672E7CB37900A1B132 /* AuthenticationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63B91662E7CB37900A1B132 /* AuthenticationUITests.swift */; };
 		C64533992E60FCA7008714AB /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64533982E60FCA7008714AB /* AuthenticationView.swift */; };
 		C67ECF0A2E610220005CFCFD /* BarBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECF092E610220005CFCFD /* BarBackButton.swift */; };
 		C67ECF0C2E610359005CFCFD /* CustomBackToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67ECF0B2E610359005CFCFD /* CustomBackToolbar.swift */; };
@@ -83,14 +87,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C6ACAA512E5D2B9F008B6C63 /* PBXContainerItemProxy */ = {
+		C63B90F62E7CADA500A1B132 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C6ACAA3A2E5D2B9E008B6C63 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C6ACAA412E5D2B9E008B6C63;
 			remoteInfo = Eventorias;
 		};
-		C6ACAA5B2E5D2B9F008B6C63 /* PBXContainerItemProxy */ = {
+		C6ACAA512E5D2B9F008B6C63 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C6ACAA3A2E5D2B9E008B6C63 /* Project object */;
 			proxyType = 1;
@@ -100,6 +104,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C63B90F02E7CADA500A1B132 /* EventoriasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C63B90FB2E7CADAB00A1B132 /* EventoriasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasUITests.swift; sourceTree = "<group>"; };
+		C63B90FC2E7CADAB00A1B132 /* EventoriasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoriasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C63B91642E7CB36100A1B132 /* EventCreationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationUITests.swift; sourceTree = "<group>"; };
+		C63B91662E7CB37900A1B132 /* AuthenticationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUITests.swift; sourceTree = "<group>"; };
 		C64533982E60FCA7008714AB /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		C67ECF092E610220005CFCFD /* BarBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarBackButton.swift; sourceTree = "<group>"; };
 		C67ECF0B2E610359005CFCFD /* CustomBackToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackToolbar.swift; sourceTree = "<group>"; };
@@ -145,7 +154,6 @@
 		C68714E02E7B6B4B00379C27 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 		C6ACAA422E5D2B9E008B6C63 /* Eventorias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventorias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA502E5D2B9F008B6C63 /* EventoriasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6ACAA5A2E5D2B9F008B6C63 /* EventoriasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoriasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6ACAA6D2E5D2C81008B6C63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6ACAA6E2E5D2C81008B6C63 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C6ACAA6F2E5D2C81008B6C63 /* Eventorias.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eventorias.entitlements; sourceTree = "<group>"; };
@@ -157,6 +165,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C63B90ED2E7CADA500A1B132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6ACAA3F2E5D2B9E008B6C63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,16 +209,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6ACAA572E5D2B9F008B6C63 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C63B90FD2E7CADAB00A1B132 /* EventoriasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C63B90FB2E7CADAB00A1B132 /* EventoriasUITests.swift */,
+				C63B91642E7CB36100A1B132 /* EventCreationUITests.swift */,
+				C63B91662E7CB37900A1B132 /* AuthenticationUITests.swift */,
+				C63B90FC2E7CADAB00A1B132 /* EventoriasUITestsLaunchTests.swift */,
+			);
+			path = EventoriasUITests;
+			sourceTree = "<group>";
+		};
 		C67ECF0F2E611E45005CFCFD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,7 +309,7 @@
 			children = (
 				C6ACAA422E5D2B9E008B6C63 /* Eventorias.app */,
 				C6ACAA502E5D2B9F008B6C63 /* EventoriasTests.xctest */,
-				C6ACAA5A2E5D2B9F008B6C63 /* EventoriasUITests.xctest */,
+				C63B90F02E7CADA500A1B132 /* EventoriasUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -327,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				C6ACAA762E5D2C84008B6C63 /* EventoriasTests */,
+				C63B90FD2E7CADAB00A1B132 /* EventoriasUITests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -387,6 +407,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C63B90EF2E7CADA500A1B132 /* EventoriasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C63B90F82E7CADA500A1B132 /* Build configuration list for PBXNativeTarget "EventoriasUITests" */;
+			buildPhases = (
+				C63B90EC2E7CADA500A1B132 /* Sources */,
+				C63B90ED2E7CADA500A1B132 /* Frameworks */,
+				C63B90EE2E7CADA500A1B132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C63B90F72E7CADA500A1B132 /* PBXTargetDependency */,
+			);
+			name = EventoriasUITests;
+			packageProductDependencies = (
+			);
+			productName = EventoriasUITests;
+			productReference = C63B90F02E7CADA500A1B132 /* EventoriasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C6ACAA412E5D2B9E008B6C63 /* Eventorias */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6ACAA642E5D2B9F008B6C63 /* Build configuration list for PBXNativeTarget "Eventorias" */;
@@ -449,26 +489,6 @@
 			productReference = C6ACAA502E5D2B9F008B6C63 /* EventoriasTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C6ACAA592E5D2B9F008B6C63 /* EventoriasUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6ACAA6A2E5D2B9F008B6C63 /* Build configuration list for PBXNativeTarget "EventoriasUITests" */;
-			buildPhases = (
-				C6ACAA562E5D2B9F008B6C63 /* Sources */,
-				C6ACAA572E5D2B9F008B6C63 /* Frameworks */,
-				C6ACAA582E5D2B9F008B6C63 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6ACAA5C2E5D2B9F008B6C63 /* PBXTargetDependency */,
-			);
-			name = EventoriasUITests;
-			packageProductDependencies = (
-			);
-			productName = EventoriasUITests;
-			productReference = C6ACAA5A2E5D2B9F008B6C63 /* EventoriasUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -476,19 +496,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					C63B90EF2E7CADA500A1B132 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = C6ACAA412E5D2B9E008B6C63;
+					};
 					C6ACAA412E5D2B9E008B6C63 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 					C6ACAA4F2E5D2B9F008B6C63 = {
 						CreatedOnToolsVersion = 16.4;
 						LastSwiftMigration = 1640;
-						TestTargetID = C6ACAA412E5D2B9E008B6C63;
-					};
-					C6ACAA592E5D2B9F008B6C63 = {
-						CreatedOnToolsVersion = 16.4;
 						TestTargetID = C6ACAA412E5D2B9E008B6C63;
 					};
 				};
@@ -513,12 +533,19 @@
 			targets = (
 				C6ACAA412E5D2B9E008B6C63 /* Eventorias */,
 				C6ACAA4F2E5D2B9F008B6C63 /* EventoriasTests */,
-				C6ACAA592E5D2B9F008B6C63 /* EventoriasUITests */,
+				C63B90EF2E7CADA500A1B132 /* EventoriasUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C63B90EE2E7CADA500A1B132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6ACAA402E5D2B9E008B6C63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,16 +563,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6ACAA582E5D2B9F008B6C63 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C63B90EC2E7CADA500A1B132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C63B90FE2E7CADAB00A1B132 /* EventoriasUITests.swift in Sources */,
+				C63B91672E7CB37900A1B132 /* AuthenticationUITests.swift in Sources */,
+				C63B90FF2E7CADAB00A1B132 /* EventoriasUITestsLaunchTests.swift in Sources */,
+				C63B91652E7CB36100A1B132 /* EventCreationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6ACAA3E2E5D2B9E008B6C63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -607,29 +638,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6ACAA562E5D2B9F008B6C63 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C63B90F72E7CADA500A1B132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6ACAA412E5D2B9E008B6C63 /* Eventorias */;
+			targetProxy = C63B90F62E7CADA500A1B132 /* PBXContainerItemProxy */;
+		};
 		C6ACAA522E5D2B9F008B6C63 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C6ACAA412E5D2B9E008B6C63 /* Eventorias */;
 			targetProxy = C6ACAA512E5D2B9F008B6C63 /* PBXContainerItemProxy */;
 		};
-		C6ACAA5C2E5D2B9F008B6C63 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6ACAA412E5D2B9E008B6C63 /* Eventorias */;
-			targetProxy = C6ACAA5B2E5D2B9F008B6C63 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		C63B90F92E7CADA500A1B132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GJ746626DJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jesenberger.pascal.EventoriasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Eventorias;
+			};
+			name = Debug;
+		};
+		C63B90FA2E7CADA500A1B132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GJ746626DJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jesenberger.pascal.EventoriasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Eventorias;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		C6ACAA622E5D2B9F008B6C63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -664,6 +733,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = GJ746626DJ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -687,6 +757,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -726,6 +797,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = GJ746626DJ;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -742,6 +814,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -754,9 +827,12 @@
 				CODE_SIGN_ENTITLEMENTS = Eventorias/Configuration/Eventorias.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = GJ746626DJ;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app uses the camera to capture a picture for uploading events.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app uses the photo library to select a picture for uploading events.";
@@ -796,9 +872,12 @@
 				CODE_SIGN_ENTITLEMENTS = Eventorias/Configuration/Eventorias.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = GJ746626DJ;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "The app uses the camera to capture a picture for uploading events.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app uses the photo library to select a picture for uploading events.";
@@ -837,6 +916,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = GJ746626DJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
@@ -863,6 +943,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = GJ746626DJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
@@ -881,55 +962,18 @@
 			};
 			name = Release;
 		};
-		C6ACAA6B2E5D2B9F008B6C63 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GJ746626DJ;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.jesenberger.pascal.EventoriasUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = Eventorias;
-				XROS_DEPLOYMENT_TARGET = 2.5;
-			};
-			name = Debug;
-		};
-		C6ACAA6C2E5D2B9F008B6C63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GJ746626DJ;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.jesenberger.pascal.EventoriasUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_TARGET_NAME = Eventorias;
-				XROS_DEPLOYMENT_TARGET = 2.5;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C63B90F82E7CADA500A1B132 /* Build configuration list for PBXNativeTarget "EventoriasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C63B90F92E7CADA500A1B132 /* Debug */,
+				C63B90FA2E7CADA500A1B132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C6ACAA3D2E5D2B9E008B6C63 /* Build configuration list for PBXProject "Eventorias" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -953,15 +997,6 @@
 			buildConfigurations = (
 				C6ACAA682E5D2B9F008B6C63 /* Debug */,
 				C6ACAA692E5D2B9F008B6C63 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6ACAA6A2E5D2B9F008B6C63 /* Build configuration list for PBXNativeTarget "EventoriasUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6ACAA6B2E5D2B9F008B6C63 /* Debug */,
-				C6ACAA6C2E5D2B9F008B6C63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
