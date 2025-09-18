@@ -16,9 +16,15 @@ struct CustomTabBar: View {
             
             TabBarItem(text: "Events", image: "EventIcon", selectedTab: $selectedTab)
                 .onTapGesture { selectedTab = "Events" }
+                .accessibilityElement()
+                .accessibilityLabel("Événements")
+                .accessibilityAddTraits(selectedTab == "Events" ? .isSelected : .isButton)
             
             TabBarItem(text: "Profile", image: "ProfileIcon", selectedTab: $selectedTab)
                 .onTapGesture { selectedTab = "Profile" }
+                .accessibilityElement()
+                .accessibilityLabel("Profil")
+                .accessibilityAddTraits(selectedTab == "Profile" ? .isSelected : .isButton)
             
             Spacer()
         }
