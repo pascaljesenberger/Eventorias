@@ -56,6 +56,7 @@ struct EventsView: View {
                         }
                     }
                     .padding(.horizontal)
+                    .padding(.bottom)
                 }
                 .refreshable {
                     await viewModel.refreshEvents()
